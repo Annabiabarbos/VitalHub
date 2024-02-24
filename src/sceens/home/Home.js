@@ -12,6 +12,8 @@ import { ListComponent } from "../../components/list/List"
 import { AppointmentCard } from "../../components/appointmentCard/AppointmentCard"
 import { CancellationModal } from "../../components/cancelationModal/CancelationModal"
 import { MedicalRecordModal } from "../../components/medicalRecordModal/MedicalRecordModal"
+import AppointmentModal from "../../components/appointmentModal/AppointmentModal"
+
 
 const Consultas = [
     { id: 1, nome: "joao", situacao: "pendente" },
@@ -85,7 +87,7 @@ export const Home = () => {
                 setShowModalCancel={setShowModalCancel}
             />
             
-            <MedicalRecordModal
+            <AppointmentModal
                 visible={showModalAppointment}
                 setShowModalAppointment={setShowModalAppointment}
             />

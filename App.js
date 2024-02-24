@@ -6,7 +6,7 @@ import { Navigation } from "./src/sceens/navigation/Navigation";
 
 const Stack = createNativeStackNavigator()
 
-import { useFonts, MontserratAlternates_600SemiBold, MontserratAlternates_500Medium, MontserratAlternates_700Bold, Quicksand_500Medium } from "@expo-google-fonts/montserrat-alternates";
+import { useFonts, MontserratAlternates_600SemiBold, MontserratAlternates_500Medium, MontserratAlternates_700Bold, Quicksand_500Medium, Quicksand_700Bold} from "@expo-google-fonts/montserrat-alternates";
 import { Login } from "./src/sceens/login/Login";
 
 import { EmailVerify, VerificarEmail, Verify } from "./src/sceens/emailVerify/EmailVerify";
@@ -25,6 +25,7 @@ export default function app() {
     MontserratAlternates_500Medium,
     MontserratAlternates_700Bold,
     Quicksand_500Medium,
+    Quicksand_700Bold
   });
 
   if (!fontsLoaded && !fontsError) {
@@ -44,11 +45,7 @@ export default function app() {
 
       <Stack.Navigator>
 
-        <Stack.Screen
-          name="Home"
-          component={Home}
-          //options={{ title: "Home" }}
-        />
+
 
         <Stack.Screen
 
@@ -92,7 +89,11 @@ export default function app() {
           options={{ title: "Criar conta" }}
         />
 
-
+        <Stack.Screen
+          name="Home"
+          component={Home}
+          options={{ title: "Home" }}
+        />
 
 
 
