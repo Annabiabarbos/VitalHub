@@ -52,6 +52,10 @@ const AppointmentModal = ({ visible, setShowModalAppointment, setShowModalCancel
                      {/* <Button>
                         <ButtonTitle>Salvar</ButtonTitle>
                     </Button> */}
+
+                     {/* <Button>
+                        <ButtonTitle>Editar</ButtonTitle>
+                    </Button> */}
                     
                     <ButtonSecondary onPress={() => setShowModalAppointment(false)}>
                         <ButtonSecondaryTitle>
