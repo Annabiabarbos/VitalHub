@@ -11,7 +11,6 @@ import { AbsListAppointament } from "../../components/absListAppointment/absList
 import { ListComponent } from "../../components/list/List"
 import { AppointmentCard } from "../../components/appointmentCard/AppointmentCard"
 import { CancellationModal } from "../../components/cancelationModal/CancelationModal"
-import { MedicalRecordModal } from "../../components/medicalRecordModal/MedicalRecordModal"
 import AppointmentModal from "../../components/appointmentModal/AppointmentModal"
 
 

@@ -5,6 +5,8 @@ export const PatientModal = styled.View`
     align-items: center ;
     justify-content:center ;
     background-color: rgba(0, 0, 0, 0.60) ;
+    height: 100%;
+    width: 100%;
 `
 export const ModalContent = styled.View`
     padding: 30px 30px 10px ;

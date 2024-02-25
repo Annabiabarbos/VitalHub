@@ -44,3 +44,6 @@ text-transform: capitalize;
 text-decoration: underline;
 color: #344f8f;
 `
+export const ButtonProfile = styled(Button)`
+margin-left: 10px;
+`

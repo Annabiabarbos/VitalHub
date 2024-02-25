@@ -6,7 +6,7 @@ import { Navigation } from "./src/sceens/navigation/Navigation";
 
 const Stack = createNativeStackNavigator()
 
-import { useFonts, MontserratAlternates_600SemiBold, MontserratAlternates_500Medium, MontserratAlternates_700Bold, Quicksand_500Medium, Quicksand_700Bold} from "@expo-google-fonts/montserrat-alternates";
+import { useFonts, MontserratAlternates_600SemiBold, MontserratAlternates_500Medium, MontserratAlternates_700Bold, Quicksand_500Medium, Quicksand_700Bold, Quicksand_600SemiBold } from "@expo-google-fonts/montserrat-alternates";
 import { Login } from "./src/sceens/login/Login";
 
 import { EmailVerify, VerificarEmail, Verify } from "./src/sceens/emailVerify/EmailVerify";
@@ -15,6 +15,7 @@ import { NewPassword } from "./src/sceens/newPassword/NewPassword";
 import { NewAccount } from "./src/sceens/newAccount/NewAccount"
 import { Password } from "./src/sceens/password/Password"
 import { Home } from "./src/sceens/home/Home";
+import { Profile } from "./src/sceens/profile/Profile";
 
 
 
@@ -25,7 +26,9 @@ export default function app() {
     MontserratAlternates_500Medium,
     MontserratAlternates_700Bold,
     Quicksand_500Medium,
-    Quicksand_700Bold
+    Quicksand_700Bold,
+    Quicksand_600SemiBold
+
   });
 
   if (!fontsLoaded && !fontsError) {
@@ -44,6 +47,12 @@ export default function app() {
     <NavigationContainer>
 
       <Stack.Navigator>
+
+        <Stack.Screen
+          name="Profile"
+          component={Profile}
+          options={{ title: "Perfil" }}
+        />
 
 
 
