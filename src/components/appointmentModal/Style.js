@@ -25,3 +25,8 @@ justify-content: space-between;
 display: flex;
 flex-direction: row;
 `
+export const ImagePront = styled.Image`
+width: 285px;
+height: 180px;
+border-radius: 15px;
+`

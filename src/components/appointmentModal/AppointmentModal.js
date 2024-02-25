@@ -1,69 +1,42 @@
 import { Modal } from "react-native";
-import { AppointmentModalpront, Informations, ModalContentpront, ProfileImagePront, TextsInformations } from "./Style";
+import { AppointmentModalpront, ImageProfile, ImagePront, Informations, ModalContentpront, ProfileImagePront, TextsInformations } from "./Style";
 import { Age, Email, TextInput, Title } from "../title/Style";
-import { Button, ButtonSecondary, ButtonSecondaryTitle, ButtonTitle } from "../button/Style";
+import { Button, ButtonSecondary, ButtonSecondaryTitle, ButtonTitle, TextButtonPront } from "../button/Style";
 import { Input, InputPront, InputProntBig } from "../input/Style";
 import { ButtonTittle } from "../buttonTitle/Style";
 import { Container } from "../container/Style";
+import { ModalContent, ModalText } from "../cancelationModal/Style";
+import { ImageUser } from "../header/Style";
+import { TextsProfile } from "../../sceens/profile/Style";
 
 
 
-const AppointmentModal = ({ visible, setShowModalAppointment, setShowModalCancel, ...rest }) => {
+const AppointmentModal = ({ navigation, visible, setShowModalAppointment, setShowModalCancel, ...rest }) => {
     return (
         <Modal {...rest} visible={visible} transparent={true} animationType="fade">
             <AppointmentModalpront>
 
-                <ModalContentpront>
+                <ModalContent>
 
-                    <ProfileImagePront source={{ uri: "https://github.com/ojuaum1.png" }} />
-
-                    <Title> João Oliveira </Title>
-
+                    <ImagePront source={{ uri: "https://github.com/ojuaum1.png" }} />
+                    <Title>João Oliveira</Title>
 
                     <Informations>
                         <Age>19 anos</Age>
                         <Email>joao.oliveiira.pda@gmail.com</Email>
                     </Informations>
 
-                    <TextInput>
-                        Descrição da consulta
-                    </TextInput>
+                    <Button>
+                        <TextButtonPront >Inserir prontuário</TextButtonPront>
+                    </Button>
 
-                    <InputProntBig
-                        placeholder='Descrição'
-                    />
-
-                    <TextInput>
-                        Diagnóstico do paciente
-                    </TextInput>
-
-                    <InputPront
-                        placeholder="Diagnóstico"
-                    />
-
-                    <TextInput>
-                        Prescrição médica
-                    </TextInput>
-
-                    <InputProntBig
-                        placeholder="Prescrição médica"
-                    />
-
-                     {/* <Button>
-                        <ButtonTitle>Salvar</ButtonTitle>
-                    </Button> */}
-
-                     {/* <Button>
-                        <ButtonTitle>Editar</ButtonTitle>
-                    </Button> */}
-                    
                     <ButtonSecondary onPress={() => setShowModalAppointment(false)}>
                         <ButtonSecondaryTitle>
                             Cancelar
                         </ButtonSecondaryTitle>
                     </ButtonSecondary>
 
-                </ModalContentpront>
+                </ModalContent>
 
             </AppointmentModalpront>
         </Modal>

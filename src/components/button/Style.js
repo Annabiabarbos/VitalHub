@@ -47,3 +47,9 @@ color: #344f8f;
 export const ButtonProfile = styled(Button)`
 margin-left: 10px;
 `
+export const TextButtonPront = styled.Text`
+font-size: 14px;
+font-family: "MontserratAlternates_700Bold";
+text-transform: uppercase;
+color: #fff;
+`

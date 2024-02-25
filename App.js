@@ -47,15 +47,6 @@ export default function app() {
     <NavigationContainer>
 
       <Stack.Navigator>
-
-        <Stack.Screen
-          name="Profile"
-          component={Profile}
-          options={{ title: "Perfil" }}
-        />
-
-
-
         <Stack.Screen
 
           //nome da tela 
@@ -103,8 +94,11 @@ export default function app() {
           component={Home}
           options={{ title: "Home" }}
         />
-
-
+        <Stack.Screen
+          name="Profile"
+          component={Profile}
+          options={{ title: "Perfil" }}
+        />
 
       </Stack.Navigator>
 
