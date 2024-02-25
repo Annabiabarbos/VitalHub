@@ -26,9 +26,9 @@ export const NewPassword = ({navigation}) => {
         secureTextEntry
         />
 
-        <ButtonNewPws>
+        <ButtonNewPws onPress = {() => navigation.navigate("Login")}>
             <ButtonTittle
-            onPress = {() => navigation.navigate("Login")}
+            
             >Confirmar nova senha</ButtonTittle>
         </ButtonNewPws>
        

@@ -7,7 +7,7 @@ import { Text, TextCancelar } from "../../components/texts/Style"
 import { Title } from "../../components/title/Style"
 
 
-export const NewAccount = ({navigation}) => {
+export const NewAccount = ({ navigation }) => {
     return (
         <Container>
 
@@ -30,16 +30,15 @@ export const NewAccount = ({navigation}) => {
                 placeholder="Confirmar Senha"
                 secureTextEntry
             />
-            <Button>
+            <Button onPress={() => navigation.navigate("Home")}>
                 <ButtonTittle
-                onPress={() => navigation.navigate("Home")}
+
                 >Cadastrar</ButtonTittle>
             </Button>
 
             <TextCancelar
                 onPress={() => navigation.navigate("Login")}
             >Cancelar</TextCancelar>
-
         </Container>
     )
 }
