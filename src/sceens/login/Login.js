@@ -10,13 +10,7 @@ import { ButtonTittle, ButtonTittleGoogle } from "../../components/buttonTitle/S
 import { AntDesign } from '@expo/vector-icons';
 import { ContentAccount, TextAccount } from "./Style"
 
-import { Navigation } from "../navigation/Navigation"
-import { NavigationContainer } from "@react-navigation/native"
-
-
-
-
-export const Login = ({navigation}) => {
+export const Login = ({ navigation }) => {
     return (
         <Container>
 
@@ -36,27 +30,29 @@ export const Login = ({navigation}) => {
             />
 
             <LinkMedium
-            onPress={() => navigation.navigate ("RecuperarSenha")}
+                onPress={() => navigation.navigate("RecuperarSenha")}
             > Esqueceu sua senha?</LinkMedium>
 
             <Button
-             >
-                <ButtonTittle 
-                onPress={() => navigation.navigate ("Home")}
+                onPress={() => navigation.navigate("Home")}
+            >
+                <ButtonTittle
                 >Entrar</ButtonTittle>
             </Button>
 
 
 
-            <ButtonGoogle>
-            <AntDesign name="google" size={18} color="#496BBA" />
+            <ButtonGoogle
+                onPress={() => navigation.navigate("Home")}
+            >
+                <AntDesign name="google" size={18} color="#496BBA" />
                 <ButtonTittleGoogle>Entrar com Google</ButtonTittleGoogle>
             </ButtonGoogle>
 
             <ContentAccount>
                 <TextAccount>Não tem conta?
                     <LinkBold
-                     onPress={() => navigation.navigate ("NewAccount")}
+                        onPress={() => navigation.navigate("NewAccount")}
                     > Crie uma conta agora!</LinkBold>
                 </TextAccount>
             </ContentAccount>

@@ -16,6 +16,7 @@ import { NewAccount } from "./src/sceens/newAccount/NewAccount"
 import { Password } from "./src/sceens/password/Password"
 import { Home } from "./src/sceens/home/Home";
 import { Profile } from "./src/sceens/profile/Profile";
+import { MedicalRecord } from "./src/sceens/MedicalRecord/MedicalRecord";
 
 
 
@@ -47,7 +48,8 @@ export default function app() {
     <NavigationContainer>
 
       <Stack.Navigator>
-        <Stack.Screen
+
+        {/* <Stack.Screen
 
           //nome da tela 
           name='Navigation'
@@ -57,8 +59,9 @@ export default function app() {
 
           //titulo da tela
           options={{ title: 'Navigation' }}
+        /> */}
 
-        />
+
         <Stack.Screen
           name="Login"
           component={Login}
@@ -98,6 +101,12 @@ export default function app() {
           name="Profile"
           component={Profile}
           options={{ title: "Perfil" }}
+        />
+
+        <Stack.Screen
+          name="MedicalRecord"
+          component={MedicalRecord}
+          options={{ title: "MedicalRecord" }}
         />
 
       </Stack.Navigator>

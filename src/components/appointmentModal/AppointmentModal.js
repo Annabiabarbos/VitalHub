@@ -11,7 +11,7 @@ import { TextsProfile } from "../../sceens/profile/Style";
 
 
 
-const AppointmentModal = ({ navigation, visible, setShowModalAppointment, setShowModalCancel, ...rest }) => {
+const AppointmentModal = ({visible , setShowModalAppointment, ...rest }) => {
     return (
         <Modal {...rest} visible={visible} transparent={true} animationType="fade">
             <AppointmentModalpront>
@@ -27,7 +27,7 @@ const AppointmentModal = ({ navigation, visible, setShowModalAppointment, setSho
                     </Informations>
 
                     <Button>
-                        <TextButtonPront >Inserir prontuário</TextButtonPront>
+                        <TextButtonPront>Inserir prontuário</TextButtonPront>
                     </Button>
 
                     <ButtonSecondary onPress={() => setShowModalAppointment(false)}>
