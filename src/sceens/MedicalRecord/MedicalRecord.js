@@ -1,12 +1,18 @@
+
+import { ScrollView } from "react-native"
 import { Informations, ProfileImagePront } from "../../components/appointmentModal/Style"
 import { Button, ButtonSecondary, ButtonSecondaryTitle, ButtonTitle } from "../../components/button/Style"
 import { Container } from "../../components/container/Style"
 import { InputPront, InputProntBig } from "../../components/input/Style"
-import { Age, Email, TextInput, Title } from "../../components/title/Style"
+import { Age, Email, TextInput, TextInputDesc, TextInputDiag, TextInputMed, Title } from "../../components/title/Style"
+import { ContainerScroll, ContainerScrollProfile, ScrollViewMedRec } from "../../components/ScrollView/ScrollView"
+import { ViewInput, ViewMedRec } from "./Style"
 
-export const MedicalRecord = () => {
+
+export const MedicalRecord = ({ navigation }) => {
     return (
         <Container>
+
             <ProfileImagePront source={{ uri: "https://github.com/ojuaum1.png" }} />
 
             <Title> João Oliveira </Title>
@@ -17,43 +23,43 @@ export const MedicalRecord = () => {
                 <Email>joao.oliveiira.pda@gmail.com</Email>
             </Informations>
 
-            <TextInput>
-                Descrição da consulta
-            </TextInput>
+            <ContainerScroll>
+                <TextInputDesc>
+                    Descrição da consulta
+                </TextInputDesc>
 
-            <InputProntBig
-                placeholder='Descrição'
-            />
+                <InputProntBig
+                    placeholder='Descrição'
+                />
 
-            <TextInput>
-                Diagnóstico do paciente
-            </TextInput>
+                <TextInputDiag>
+                    Diagnóstico do paciente
+                </TextInputDiag>
 
-            <InputPront
-                placeholder="Diagnóstico"
-            />
+                <InputPront
+                    placeholder="Diagnóstico"
+                />
 
-            <TextInput>
-                Prescrição médica
-            </TextInput>
+                <TextInputMed>
+                    Prescrição médica
+                </TextInputMed>
+                <InputProntBig
+                    placeholder="Prescrição médica"
+                />
+                <Button>
+                    <ButtonTitle>Salvar</ButtonTitle>
+                </Button>
 
-            <InputProntBig
-                placeholder="Prescrição médica"
-            />
+                <Button>
+                    <ButtonTitle>Editar</ButtonTitle>
+                </Button>
 
-            <Button>
-                <ButtonTitle>Salvar</ButtonTitle>
-            </Button>
-
-            <Button>
-                <ButtonTitle>Editar</ButtonTitle>
-            </Button>
-
-            <ButtonSecondary onPress={() => setShowModalAppointment(false)}>
-                <ButtonSecondaryTitle>
-                    Cancelar
-                </ButtonSecondaryTitle>
-            </ButtonSecondary>
+                <ButtonSecondary onPress={() => navigation.navigate("Home")}>
+                    <ButtonSecondaryTitle>
+                        Cancelar
+                    </ButtonSecondaryTitle>
+                </ButtonSecondary>
+            </ContainerScroll>
         </Container>
     )
 }

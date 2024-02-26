@@ -11,7 +11,7 @@ import { TextsProfile } from "../../sceens/profile/Style";
 
 
 
-const AppointmentModal = ({visible , setShowModalAppointment, ...rest }) => {
+const AppointmentModal = ({visible, navigation, setShowModalAppointment,  ...rest }) => {
     return (
         <Modal {...rest} visible={visible} transparent={true} animationType="fade">
             <AppointmentModalpront>
@@ -26,7 +26,7 @@ const AppointmentModal = ({visible , setShowModalAppointment, ...rest }) => {
                         <Email>joao.oliveiira.pda@gmail.com</Email>
                     </Informations>
 
-                    <Button>
+                    <Button onPress={() => navigation.navigate("MedicalRecord")}>
                         <TextButtonPront>Inserir prontuário</TextButtonPront>
                     </Button>
 

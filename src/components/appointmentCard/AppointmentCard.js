@@ -18,6 +18,7 @@ export const AppointmentCard = ({
   situacao = "pendente",
   onPressCancel,
   onPressAppointment,
+  navigation
 }) => {
   return (
     // container principal
