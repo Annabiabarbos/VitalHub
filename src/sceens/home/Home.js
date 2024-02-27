@@ -5,13 +5,15 @@ import { Container } from "../../components/container/Style"
 import { HomeCalendar } from "../../components/homeCalendar/HomeCalendar"
 import { Header } from "../../components/header/Header"
 import { useState } from "react"
-import { FilterAppointament } from "./style"
+import { CreatePatientModal, FilterAppointament, IconButton } from "./style"
 import { AbsListAppointament } from "../../components/absListAppointment/absListAppointment"
 
 import { ListComponent } from "../../components/list/List"
 import { AppointmentCard } from "../../components/appointmentCard/AppointmentCard"
 import { CancellationModal } from "../../components/cancelationModal/CancelationModal"
 import AppointmentModal from "../../components/appointmentModal/AppointmentModal"
+import { ButtonAppointment } from "../../components/button/Style"
+import { ScheduleModal } from "../../components/scheduleModal/ScheduleModal"
 
 
 const Consultas = [
@@ -21,11 +23,12 @@ const Consultas = [
     { id: 4, nome: "joao", situacao: "realizado" },
     { id: 5, nome: "joao", situacao: "cancelado" },
 ]
-export const Home = ({navigation}) => {
+export const Home = ({ navigation }) => {
     const [statusLista, setStatusLista] = useState("pendente")
 
     const [showModalCancel, setShowModalCancel] = useState(false);
     const [showModalAppointment, setShowModalAppointment] = useState(false);
+    const [ShowScheduleModal, setShowScheduleModal] = useState(false)
     return (
         <Container>
 
@@ -76,8 +79,7 @@ export const Home = ({navigation}) => {
                             situacao={item.situacao}
                             onPressCancel={() => setShowModalCancel(true)}
                             onPressAppointment={() => setShowModalAppointment(true)}
-                        />
-                    )
+                        />)
                 }
             />
 
@@ -85,12 +87,23 @@ export const Home = ({navigation}) => {
                 visible={showModalCancel}
                 setShowModalCancel={setShowModalCancel}
             />
-            
-            <AppointmentModal 
+
+            <AppointmentModal
                 visible={showModalAppointment}
                 setShowModalAppointment={setShowModalAppointment}
                 navigation={navigation}
             />
+
+            <ScheduleModal 
+            visible={ShowScheduleModal}
+            setShowScheduleModal={setShowScheduleModal}
+            navigation={navigation}
+            />
+
+
+            <ButtonAppointment onPress={() => { setShowScheduleModal(true) }}>
+                <IconButton source={require("../../../assets/jam_medical.png")} />
+            </ButtonAppointment>
         </Container>
 
     )

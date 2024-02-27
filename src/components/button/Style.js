@@ -76,3 +76,16 @@ export const ButtonEditProfile = styled(ButtonEdit)
 export const ButtonCancell= styled(ButtonSecondary)`
 margin-left: -35px;
 `
+
+export const ButtonAppointment = styled.TouchableOpacity`
+width: 60px;
+height: 60px;
+background-color: #49B3BA;
+border-radius: 7px;
+margin-bottom: 50px;
+align-self: flex-end;
+margin-right: 20px;
+`
+export const ButtonSchedule = styled.TouchableOpacity`
+border-color: #60BFC5;;
+`

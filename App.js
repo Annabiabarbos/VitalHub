@@ -22,6 +22,7 @@ import { MedicalRecordEdit } from "./src/sceens/MedicalRecord/MedicalRecordEdit"
 
 
 
+
 export default function app() {
 
   const [fontsLoaded, fontsError] = useFonts({
@@ -113,15 +114,12 @@ export default function app() {
           component={MedicalRecord}
           options={{ title: "MedicalRecord" }}
         />
-        
+
         <Stack.Screen
           name="MedicalRecordEdit"
           component={MedicalRecordEdit}
           options={{ title: "MedicalRecordEdit" }}
         />
-
-
-
 
       </Stack.Navigator>
 

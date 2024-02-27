@@ -4,7 +4,7 @@ export const PatientModal = styled.View`
     flex: 1;
     align-items: center ;
     justify-content:center ;
-    background-color: rgba(0, 0, 0, 0.60) ;
+    background-color: rgba(0, 0, 0, 0.) ;
     height: 100%;
     width: 100%;
 `
@@ -23,4 +23,11 @@ export const ModalText = styled.Text`
     text-align:center ;
     margin-top: 10px ;
     font-family:"Quicksand_500Medium" ;
+`
+
+export const ModalSchedule = styled.View`
+background-color: #fff;
+width: 100%;
+height: 500px;
+align-items: center;
 `

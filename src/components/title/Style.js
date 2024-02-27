@@ -44,3 +44,10 @@ export const TextInputMed = styled(Text)`
 margin-left: -90px;
 margin-bottom: -10px;
 `
+export const TitleModal = styled(Title)`
+margin-top: 30px;
+`
+
+export const TextInputModal = styled(TextInput)`
+margin-left: -20px;
+`
