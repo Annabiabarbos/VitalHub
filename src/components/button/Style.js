@@ -28,6 +28,8 @@ width: 80%;
 export const ButtonSecondary = styled(Button)`
     background-color: transparent;
     border: none;
+    display: flex;
+    align-self: center;
 `
 
 
@@ -52,4 +54,24 @@ font-size: 14px;
 font-family: "MontserratAlternates_700Bold";
 text-transform: uppercase;
 color: #fff;
+`
+export const ButtonEdit = styled(Button)`
+background-color: #ACABB7;
+margin-left: 10px;
+border-color: transparent;
+`
+
+export const ButtonExit = styled(Button)`
+width: 190px;
+background-color: #ACABB7;
+border-color: transparent;
+display: flex;
+align-self: center;
+justify-content: center;
+`
+export const ButtonEditMedRec = styled(ButtonEdit)`
+margin-left: -0px;
+`
+export const ButtonCancell= styled(ButtonSecondary)`
+margin-left: -35px;
 `

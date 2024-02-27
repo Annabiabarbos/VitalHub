@@ -62,6 +62,7 @@ export const ButtonText = styled.Text`
 `
 export const ButtonTextProfile = styled.Text`
 color: #fff;
-font-family: "Quicksand_700Bold";
+font-family:"MontserratAlternates_700Bold";
 text-transform: uppercase;
+text-align: center;
 `

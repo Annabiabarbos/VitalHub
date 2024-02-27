@@ -1,15 +1,12 @@
-
-import { ScrollView } from "react-native"
+import { ContainerScroll } from "../../components/ScrollView/ScrollView"
 import { Informations, ProfileImagePront } from "../../components/appointmentModal/Style"
 import { Button, ButtonCancell, ButtonEdit, ButtonEditMedRec, ButtonSecondary, ButtonSecondaryTitle, ButtonTitle } from "../../components/button/Style"
 import { Container } from "../../components/container/Style"
-import { InputPront, InputProntBig } from "../../components/input/Style"
-import { Age, Email, TextInput, TextInputDesc, TextInputDiag, TextInputMed, Title } from "../../components/title/Style"
-import { ContainerScroll, ContainerScrollProfile, ScrollViewMedRec } from "../../components/ScrollView/ScrollView"
-import { ViewInput, ViewMedRec } from "./Style"
+import { InputPront, InputProntBig, InputProntBigEdit, InputProntEdit } from "../../components/input/Style"
+import { Age, Email, TextInputDesc, TextInputDiag, TextInputMed, Title } from "../../components/title/Style"
 
 
-export const MedicalRecord = ({ navigation }) => {
+export const MedicalRecordEdit = ({navigation}) => {
     return (
         <Container>
 
@@ -28,31 +25,28 @@ export const MedicalRecord = ({ navigation }) => {
                     Descrição da consulta
                 </TextInputDesc>
 
-                <InputProntBig
-                    placeholder='Descrição'
+                <InputProntBigEdit
                 />
 
                 <TextInputDiag>
                     Diagnóstico do paciente
                 </TextInputDiag>
 
-                <InputPront
-                    placeholder="Diagnóstico"
+                <InputProntEdit
                 />
 
                 <TextInputMed>
                     Prescrição médica
                 </TextInputMed>
-                <InputProntBig
-                    placeholder="Prescrição médica"
-                />
-                <Button onPress={() => navigation.navigate("MedicalRecordEdit")}>
+                <InputProntBigEdit />
+
+                <Button onPress={() => navigation.navigate("Home")}>
                     <ButtonTitle>Salvar</ButtonTitle>
                 </Button>
 
-                <ButtonEditMedRec>
+                <Button>
                     <ButtonTitle>Editar</ButtonTitle>
-                </ButtonEditMedRec>
+                </Button>
 
                 <ButtonCancell onPress={() => navigation.navigate("Home")}>
                     <ButtonSecondaryTitle>

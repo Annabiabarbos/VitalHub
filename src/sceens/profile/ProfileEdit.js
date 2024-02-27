@@ -1,6 +1,6 @@
 import { ContainerScrollProfile } from "../../components/ScrollView/ScrollView"
 import { ButtonTextProfile } from "../../components/appointmentCard/Style"
-import { ButtonProfile } from "../../components/button/Style"
+import { ButtonEdit, ButtonExit, ButtonProfile, ButtonSecondary, ButtonSecondaryTitle } from "../../components/button/Style"
 import { InputAddress, InputProfile } from "../../components/input/Style"
 import { Text } from "../../components/texts/Style"
 import { Address, EmailProfile, InputCep, InputCity, NameProfile, ProfileContainer, ProfileImage, ProfileNameView, TextsProfile } from "./Style"
@@ -31,14 +31,19 @@ export const ProfileEdit = ({ navigation }) => {
                         <InputAddress />
                     </InputCity>
                 </Address>
-                <ButtonProfile>
-                    <ButtonTextProfile onPress={() => navigation.navigate("Home")}
+                <ButtonProfile onPress={() => navigation.navigate("Home")}>
+                    <ButtonTextProfile
                     >Salvar</ButtonTextProfile>
                 </ButtonProfile>
                 <ButtonProfile>
-                    <ButtonTextProfile onPress={() => navigation.navigate("Profile")}
+                    <ButtonTextProfile
                     >Editar</ButtonTextProfile>
                 </ButtonProfile>
+                <ButtonSecondary onPress={() => navigation.navigate("Navigation")}>
+                    <ButtonSecondaryTitle>
+                        Cancelar
+                    </ButtonSecondaryTitle>
+                </ButtonSecondary>
             </ContainerScrollProfile>
         </ProfileContainer>
     )

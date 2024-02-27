@@ -21,8 +21,16 @@ text-align: center;
 export const InputProntBig = styled(Input)`
 height: 120px ;
 margin-top: 10px;
-
 `   
+export const InputProntBigEdit = styled(InputProntBig)`
+background-color: #E6E6E6;
+border-color: transparent;
+`
+export const InputProntEdit = styled(Input)`
+background-color: #E6E6E6;
+border-color: transparent;
+`
+
 export const InputPront = styled(Input)`  
 margin-top: 10px;
 `  

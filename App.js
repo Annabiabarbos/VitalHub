@@ -18,6 +18,7 @@ import { Home } from "./src/sceens/home/Home";
 import { Profile } from "./src/sceens/profile/Profile";
 import { MedicalRecord } from "./src/sceens/MedicalRecord/MedicalRecord";
 import { ProfileEdit } from "./src/sceens/profile/ProfileEdit";
+import { MedicalRecordEdit } from "./src/sceens/MedicalRecord/MedicalRecordEdit";
 
 
 
@@ -50,7 +51,7 @@ export default function app() {
 
       <Stack.Navigator>
 
-        {/* <Stack.Screen
+        <Stack.Screen
 
           //nome da tela 
           name='Navigation'
@@ -60,7 +61,7 @@ export default function app() {
 
           //titulo da tela
           options={{ title: 'Navigation' }}
-        /> */}
+        />
         <Stack.Screen
           name="ProfileEdit"
           component={ProfileEdit}
@@ -111,6 +112,12 @@ export default function app() {
           name="MedicalRecord"
           component={MedicalRecord}
           options={{ title: "MedicalRecord" }}
+        />
+        
+        <Stack.Screen
+          name="MedicalRecordEdit"
+          component={MedicalRecordEdit}
+          options={{ title: "MedicalRecordEdit" }}
         />
 
 

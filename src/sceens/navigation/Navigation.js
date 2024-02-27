@@ -7,6 +7,10 @@ export  const Navigation = ({navigation}) => {
             title="Login"
             onPress={() => navigation.navigate ("Login")}
             />
+            <Button
+            title="Profile"
+            onPress={() => navigation.navigate ("Profile")}
+            />
         </View>
         
     )
