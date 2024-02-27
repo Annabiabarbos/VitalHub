@@ -70,8 +70,9 @@ align-self: center;
 justify-content: center;
 `
 export const ButtonEditMedRec = styled(ButtonEdit)`
-margin-left: -0px;
 `
+export const ButtonEditProfile = styled(ButtonEdit)
+``
 export const ButtonCancell= styled(ButtonSecondary)`
 margin-left: -35px;
 `
