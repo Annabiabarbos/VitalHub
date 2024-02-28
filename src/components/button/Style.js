@@ -89,3 +89,6 @@ margin-right: 20px;
 export const ButtonSchedule = styled.TouchableOpacity`
 border-color: #60BFC5;;
 `
+export const ButtonClinic =styled(Button)`
+margin-left: 20px;
+`

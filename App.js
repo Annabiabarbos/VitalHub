@@ -19,6 +19,7 @@ import { Profile } from "./src/sceens/profile/Profile";
 import { MedicalRecord } from "./src/sceens/MedicalRecord/MedicalRecord";
 import { ProfileEdit } from "./src/sceens/profile/ProfileEdit";
 import { MedicalRecordEdit } from "./src/sceens/MedicalRecord/MedicalRecordEdit";
+import { ChoiceClinic } from "./src/sceens/choiceClinic/ChoiceClinic";
 
 
 
@@ -119,6 +120,11 @@ export default function app() {
           name="MedicalRecordEdit"
           component={MedicalRecordEdit}
           options={{ title: "MedicalRecordEdit" }}
+        />
+        <Stack.Screen
+          name="ChoiceClinic"
+          component={ChoiceClinic}
+          options={{ title: "ChoiceClinic" }}
         />
 
       </Stack.Navigator>

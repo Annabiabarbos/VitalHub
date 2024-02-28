@@ -55,7 +55,7 @@ export const ScheduleModal = ({ visible, navigation, setShowScheduleModal, ...re
                     placeholder={"Informe a localização"}
                     />
 
-                    <Button>
+                    <Button onPress={() => navigation.navigate("ChoiceClinic")}>
                         <ButtonTittle>Continuar</ButtonTittle>
                     </Button>
 

@@ -28,6 +28,7 @@ export const ModalText = styled.Text`
 export const ModalSchedule = styled.View`
 background-color: #fff;
 width: 100%;
-height: 500px;
+height: 750px;
+margin-top: 300px;
 align-items: center;
 `

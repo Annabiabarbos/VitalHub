@@ -26,6 +26,7 @@ export const DataProfileCard = styled.View`
 `
 export const ProfileName = styled(Title)`   
     font-size: 16px ;
+    
 `
 export const ProfileData = styled.View`
     flex-direction: row ;
@@ -65,4 +66,14 @@ color: #fff;
 font-family:"MontserratAlternates_700Bold";
 text-transform: uppercase;
 text-align: center;
+`
+export const ClinicCard = styled(DataProfileCard)`
+margin-top: 10px;
+margin-left: 50px;
+margin-bottom: 65px;
+`
+
+export const ProfileNameClinic =styled(ProfileName)`
+align-self: start;
+margin-bottom: -20px;
 `
