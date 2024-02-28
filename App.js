@@ -20,6 +20,7 @@ import { MedicalRecord } from "./src/sceens/MedicalRecord/MedicalRecord";
 import { ProfileEdit } from "./src/sceens/profile/ProfileEdit";
 import { MedicalRecordEdit } from "./src/sceens/MedicalRecord/MedicalRecordEdit";
 import { ChoiceClinic } from "./src/sceens/choiceClinic/ChoiceClinic";
+import { ChoiceDoctor } from "./src/sceens/choiceDoctor/ChoiceDoctor";
 
 
 
@@ -125,6 +126,12 @@ export default function app() {
           name="ChoiceClinic"
           component={ChoiceClinic}
           options={{ title: "ChoiceClinic" }}
+        />
+
+        <Stack.Screen
+          name="ChoiceDoctor"
+          component={ChoiceDoctor}
+          options={{ title: "ChoiceDoctor" }}
         />
 
       </Stack.Navigator>

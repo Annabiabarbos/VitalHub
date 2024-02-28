@@ -10,16 +10,17 @@ import { ButtonTittle } from "../../components/buttonTitle/Style"
 export const ChoiceClinic = ({navigation}) => {
     return (
         <ContainerClinic>
+            <TitleClinic>Selecionar clínica</TitleClinic>
             <ScrollView>
-                <TitleClinic>Selecionar clínica</TitleClinic>
-                <FilterAppointamentClinic>
-                    <ClinicCard>
+                
+
+                     <ClinicCard>
                         <ProfileNameClinic>Clinica Natureh</ProfileNameClinic>
                         <ClassificationClinic>
                             <ImageClassification source={{ uri: "../../../assets/star.png" }} />
                         </ClassificationClinic>
                         <ProfileData>
-                            <TextBold>São Paulo - SP</TextBold>
+                            <TextBold>São Paulo, SP</TextBold>
                             <HourClinic>
                                 <CalendarImage source={{ uri: "../../../assets/CalendarIcon.png" }} />
                                 <TitleHour>Seg-Sex</TitleHour>
@@ -28,12 +29,12 @@ export const ChoiceClinic = ({navigation}) => {
                     </ClinicCard>
 
                     <ClinicCard>
-                        <ProfileNameClinic>Clinica Natureh</ProfileNameClinic>
+                        <ProfileNameClinic>Diamond Pró-Mulher</ProfileNameClinic>
                         <ClassificationClinic>
                             <ImageClassification source={{ uri: "../../../assets/Star" }} />
                         </ClassificationClinic>
                         <ProfileData>
-                            <TextBold>São Paulo - SP</TextBold>
+                            <TextBold>São Paulo, SP</TextBold>
                             <HourClinic>
                                 <CalendarImage source={{ uri: "../assets/CalendarIcon.png" }} />
                                 <TitleHour>Seg-Sex</TitleHour>
@@ -41,41 +42,41 @@ export const ChoiceClinic = ({navigation}) => {
                         </ProfileData>
                     </ClinicCard>
                     <ClinicCard>
-                        <ProfileNameClinic>Clinica Natureh</ProfileNameClinic>
+                        <ProfileNameClinic>Clinica Villa Lobos</ProfileNameClinic>
                         <ClassificationClinic>
                             <ImageClassification source={{ uri: "../../../assets/Star" }} />
                         </ClassificationClinic>
                         <ProfileData>
-                            <TextBold>São Paulo - SP</TextBold>
+                            <TextBold>Taboão, SP</TextBold>
                             <HourClinic>
                                 <CalendarImage source={{ uri: "../assets/CalendarIcon.png" }} />
-                                <TitleHour>Seg-Sex</TitleHour>
+                                <TitleHour>Seg-Sab</TitleHour>
                             </HourClinic>
                         </ProfileData>
                     </ClinicCard>
                     <ClinicCard>
-                        <ProfileNameClinic>Clinica Natureh</ProfileNameClinic>
+                        <ProfileNameClinic>SP Oncologia Clínica</ProfileNameClinic>
                         <ClassificationClinic>
                             <ImageClassification source={{ uri: "../../../assets/Star" }} />
                         </ClassificationClinic>
                         <ProfileData>
-                            <TextBold>São Paulo - SP</TextBold>
+                            <TextBold>Taboão, SP</TextBold>
                             <HourClinic>
                                 <CalendarImage source={{ uri: "../assets/CalendarIcon.png" }} />
-                                <TitleHour>Seg-Sex</TitleHour>
+                                <TitleHour>Seg-Sab</TitleHour>
                             </HourClinic>
                         </ProfileData>
                     </ClinicCard>
 
-                </FilterAppointamentClinic>
-                <ButtonClinic>
+                
+                <ButtonClinic onPress={() => navigation.navigate("ChoiceDoctor")}>
                     <ButtonTittle>Continuar</ButtonTittle>
                 </ButtonClinic>
                 <ButtonSecondary onPress={() => navigation.navigate("Home")}>
                     <ButtonSecondaryTitle>
                         Cancelar
                     </ButtonSecondaryTitle>
-                </ButtonSecondary>
+                </ButtonSecondary>  
 
             </ScrollView>
         </ContainerClinic>

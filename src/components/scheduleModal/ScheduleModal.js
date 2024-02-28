@@ -55,7 +55,12 @@ export const ScheduleModal = ({ visible, navigation, setShowScheduleModal, ...re
                     placeholder={"Informe a localização"}
                     />
 
-                    <Button onPress={() => navigation.navigate("ChoiceClinic")}>
+                    <Button onPress={() => {
+                        //ao clicar no botão continuar ele irá fechar o modal
+                        setShowScheduleModal(false)
+                        //E aqui levará para a página de selecionar cliníca
+                            navigation.navigate("ChoiceClinic")
+                    }}>
                         <ButtonTittle>Continuar</ButtonTittle>
                     </Button>
 

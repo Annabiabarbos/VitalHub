@@ -28,6 +28,3 @@ width: 20px;
 height: 20px;
 `
 
-export const FilterAppointamentClinic = styled.View`
-
-`

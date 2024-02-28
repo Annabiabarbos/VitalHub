@@ -4,7 +4,7 @@ import { Container } from "../../components/container/Style"
 
 import { HomeCalendar } from "../../components/homeCalendar/HomeCalendar"
 import { Header } from "../../components/header/Header"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { CreatePatientModal, FilterAppointament, IconButton } from "./style"
 import { AbsListAppointament } from "../../components/absListAppointment/absListAppointment"
 
@@ -28,7 +28,19 @@ export const Home = ({ navigation }) => {
 
     const [showModalCancel, setShowModalCancel] = useState(false);
     const [showModalAppointment, setShowModalAppointment] = useState(false);
-    const [ShowScheduleModal, setShowScheduleModal] = useState(false)
+    const [showScheduleModal, setShowScheduleModal] = useState(false)
+
+    // useEffect(() => {
+
+        
+        
+
+    // }, [])
+
+
+
+
+
     return (
         <Container>
 
@@ -94,10 +106,10 @@ export const Home = ({ navigation }) => {
                 navigation={navigation}
             />
 
-            <ScheduleModal 
-            visible={ShowScheduleModal}
-            setShowScheduleModal={setShowScheduleModal}
-            navigation={navigation}
+            <ScheduleModal
+                visible={showScheduleModal}
+                setShowScheduleModal={setShowScheduleModal}
+                navigation={navigation}
             />
 
 
