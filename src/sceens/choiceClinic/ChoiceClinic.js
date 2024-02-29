@@ -2,7 +2,7 @@ import { ScrollView, Text } from "react-native"
 import { Container } from "../../components/container/Style"
 import { Title, TitleClinic } from "../../components/title/Style"
 import { ButtonText, ClinicCard, DataProfileCard, ProfileData, ProfileName, ProfileNameClinic, TextAge, TextBold } from "../../components/appointmentCard/Style"
-import { CalendarImage, ClassificationClinic, ContainerClinic, FilterAppointamentClinic, HourClinic, ImageClassification, TitleHour , ClassificationTittle} from "./Style"
+import { CalendarImage, ClassificationClinic, ContainerClinic, FilterAppointamentClinic, HourClinic, ImageClassification, TitleHour , ClassificationTittle, TitleClassification} from "./Style"
 import { FilterAppointament } from "../home/style"
 import { Button, ButtonClinic, ButtonSecondary, ButtonSecondaryTitle } from "../../components/button/Style"
 import { ButtonTittle } from "../../components/buttonTitle/Style"
@@ -18,7 +18,7 @@ export const ChoiceClinic = ({navigation}) => {
                         <ProfileNameClinic>Clinica Natureh</ProfileNameClinic>
                         <ClassificationClinic>
                             <ImageClassification source={require('../../../assets/star.png')} />
-                            <ClassificationTittle>4,5</ClassificationTittle>
+                            <TitleClassification>4,5</TitleClassification>
                         </ClassificationClinic>
                         <ProfileData>
                             <TextBold>São Paulo, SP</TextBold>

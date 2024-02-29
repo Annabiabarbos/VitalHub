@@ -24,14 +24,18 @@ align-self: center;
 font-size: 16px;
 `
 export const  ClassificationClinic = styled.View`
-align-self: end;
+align-self: center;
+margin-right: -80px;
+flex-direction: row;
 `
 export const ImageClassification = styled.Image`
 width: 20px;
 height: 20px;
 align-self: flex-end;
-margin-right: 40px;
+
 `
-export const ClassificationTittle = styled.text`
-font-family:" Quicksand_600SemiBold";
+export const TitleClassification = styled.Text`
+font-family: "Quicksand_600SemiBold";
+color: #F9A620;
+font-size: 16px;
 `
