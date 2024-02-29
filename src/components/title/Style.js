@@ -55,3 +55,6 @@ margin-left: -20px;
 export const TitleClinic = styled(Title)`
 align-self: center;
 `
+export const TitleDate = styled(Title)`
+align-self: center;
+`

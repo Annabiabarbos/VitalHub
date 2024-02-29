@@ -2,7 +2,7 @@ import { ScrollView, Text } from "react-native"
 import { Container } from "../../components/container/Style"
 import { Title, TitleClinic } from "../../components/title/Style"
 import { ButtonText, ClinicCard, DataProfileCard, ProfileData, ProfileName, ProfileNameClinic, TextAge, TextBold } from "../../components/appointmentCard/Style"
-import { CalendarImage, ClassificationClinic, ContainerClinic, FilterAppointamentClinic, HourClinic, ImageClassification, TitleHour } from "./Style"
+import { CalendarImage, ClassificationClinic, ContainerClinic, FilterAppointamentClinic, HourClinic, ImageClassification, TitleHour , ClassificationTittle} from "./Style"
 import { FilterAppointament } from "../home/style"
 import { Button, ButtonClinic, ButtonSecondary, ButtonSecondaryTitle } from "../../components/button/Style"
 import { ButtonTittle } from "../../components/buttonTitle/Style"
@@ -17,12 +17,13 @@ export const ChoiceClinic = ({navigation}) => {
                      <ClinicCard>
                         <ProfileNameClinic>Clinica Natureh</ProfileNameClinic>
                         <ClassificationClinic>
-                            <ImageClassification source={{ uri: "../../../assets/star.png" }} />
+                            <ImageClassification source={require('../../../assets/star.png')} />
+                            <ClassificationTittle>4,5</ClassificationTittle>
                         </ClassificationClinic>
                         <ProfileData>
                             <TextBold>São Paulo, SP</TextBold>
                             <HourClinic>
-                                <CalendarImage source={{ uri: "../../../assets/CalendarIcon.png" }} />
+                                <CalendarImage source={require('../../../assets/CalendarIcon.png')} />
                                 <TitleHour>Seg-Sex</TitleHour>
                             </HourClinic>
                         </ProfileData>
@@ -31,12 +32,12 @@ export const ChoiceClinic = ({navigation}) => {
                     <ClinicCard>
                         <ProfileNameClinic>Diamond Pró-Mulher</ProfileNameClinic>
                         <ClassificationClinic>
-                            <ImageClassification source={{ uri: "../../../assets/Star" }} />
+                            <ImageClassification source={require('../../../assets/star.png')}  />
                         </ClassificationClinic>
                         <ProfileData>
                             <TextBold>São Paulo, SP</TextBold>
                             <HourClinic>
-                                <CalendarImage source={{ uri: "../assets/CalendarIcon.png" }} />
+                                <CalendarImage source={require('../../../assets/CalendarIcon.png')} />
                                 <TitleHour>Seg-Sex</TitleHour>
                             </HourClinic>
                         </ProfileData>
@@ -44,12 +45,12 @@ export const ChoiceClinic = ({navigation}) => {
                     <ClinicCard>
                         <ProfileNameClinic>Clinica Villa Lobos</ProfileNameClinic>
                         <ClassificationClinic>
-                            <ImageClassification source={{ uri: "../../../assets/Star" }} />
+                            <ImageClassification source={require('../../../assets/star.png')} />
                         </ClassificationClinic>
                         <ProfileData>
                             <TextBold>Taboão, SP</TextBold>
                             <HourClinic>
-                                <CalendarImage source={{ uri: "../assets/CalendarIcon.png" }} />
+                                <CalendarImage source={require('../../../assets/CalendarIcon.png')}  />
                                 <TitleHour>Seg-Sab</TitleHour>
                             </HourClinic>
                         </ProfileData>
@@ -57,12 +58,12 @@ export const ChoiceClinic = ({navigation}) => {
                     <ClinicCard>
                         <ProfileNameClinic>SP Oncologia Clínica</ProfileNameClinic>
                         <ClassificationClinic>
-                            <ImageClassification source={{ uri: "../../../assets/Star" }} />
+                            <ImageClassification source={require('../../../assets/star.png')}  />
                         </ClassificationClinic>
                         <ProfileData>
                             <TextBold>Taboão, SP</TextBold>
                             <HourClinic>
-                                <CalendarImage source={{ uri: "../assets/CalendarIcon.png" }} />
+                                <CalendarImage source={require('../../../assets/CalendarIcon.png')} />
                                 <TitleHour>Seg-Sab</TitleHour>
                             </HourClinic>
                         </ProfileData>

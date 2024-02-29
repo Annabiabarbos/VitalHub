@@ -1,5 +1,4 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet } from "react-native";
+
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { NavigationContainer } from "@react-navigation/native";
 import { Navigation } from "./src/sceens/navigation/Navigation";
@@ -9,7 +8,6 @@ const Stack = createNativeStackNavigator()
 import { useFonts, MontserratAlternates_600SemiBold, MontserratAlternates_500Medium, MontserratAlternates_700Bold, Quicksand_500Medium, Quicksand_700Bold, Quicksand_600SemiBold } from "@expo-google-fonts/montserrat-alternates";
 import { Login } from "./src/sceens/login/Login";
 
-import { EmailVerify, VerificarEmail, Verify } from "./src/sceens/emailVerify/EmailVerify";
 
 import { NewPassword } from "./src/sceens/newPassword/NewPassword";
 import { NewAccount } from "./src/sceens/newAccount/NewAccount"
@@ -21,6 +19,9 @@ import { ProfileEdit } from "./src/sceens/profile/ProfileEdit";
 import { MedicalRecordEdit } from "./src/sceens/MedicalRecord/MedicalRecordEdit";
 import { ChoiceClinic } from "./src/sceens/choiceClinic/ChoiceClinic";
 import { ChoiceDoctor } from "./src/sceens/choiceDoctor/ChoiceDoctor";
+import { SelectDate } from "./src/sceens/selectDate/SelectDate";
+import {Verify} from "./src/sceens/emailVerify/EmailVerify"
+
 
 
 

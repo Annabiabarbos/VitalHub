@@ -35,10 +35,10 @@ export const ChoiceDoctor = ({navigation}) => {
                     <TextArea>Clínico, Pediatra</TextArea>
                 </DoctorCard>
 
-               <ButtonChoiceDoctor>
+               <ButtonChoiceDoctor  onPress={() => navigation.navigate("SelectDate")}>
                <ButtonTittle>Continuar</ButtonTittle>
                </ButtonChoiceDoctor>
-
+ 
                <ButtonSecondary onPress={() => navigation.navigate("ChoiceClinic")}>
                     <ButtonSecondaryTitle>
                         Cancelar
