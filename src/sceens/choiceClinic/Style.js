@@ -12,6 +12,7 @@ border-radius: 5px;
 margin-left: 100px;
 flex-direction: row;
 align-self: center;
+gap: 10px;
 `
 export const CalendarImage = styled.Image`
 align-self: center;
@@ -25,7 +26,7 @@ font-size: 16px;
 `
 export const  ClassificationClinic = styled.View`
 align-self: center;
-margin-right: -80px;
+margin-right: -200px;
 flex-direction: row;
 `
 export const ImageClassification = styled.Image`

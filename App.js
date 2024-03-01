@@ -20,7 +20,7 @@ import { MedicalRecordEdit } from "./src/sceens/MedicalRecord/MedicalRecordEdit"
 import { ChoiceClinic } from "./src/sceens/choiceClinic/ChoiceClinic";
 import { ChoiceDoctor } from "./src/sceens/choiceDoctor/ChoiceDoctor";
 import { SelectDate } from "./src/sceens/selectDate/SelectDate";
-import {Verify} from "./src/sceens/emailVerify/EmailVerify"
+import { Verify } from "./src/sceens/emailVerify/EmailVerify"
 
 
 
@@ -134,6 +134,13 @@ export default function app() {
           component={ChoiceDoctor}
           options={{ title: "ChoiceDoctor" }}
         />
+
+        <Stack.Screen
+          name="SelectDate"
+          component={SelectDate}
+          options={{ title: "SelectDate" }}
+        />
+
 
       </Stack.Navigator>
 

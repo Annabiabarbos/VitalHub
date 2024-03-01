@@ -8,6 +8,9 @@ export const FilterAppointamentClinic = styled.View`
 export const ImageCard = styled.Image`
 width: 70px;
 height: 80px;
+border-radius: 5px;
+margin-left: 10px;
+margin-top: 10px;
 `
 export const DoctorCard = styled.View`
 background-color: white;
@@ -29,10 +32,11 @@ export const FilterAppointamentDoctor = styled(FilterAppointament)`
 export const TextArea = styled(TextBold)`
 align-self: start;
 margin-top: -40px;
-margin-left: 70px;
+margin-left: 90px;
 `
 export const ContCard = styled.View `
 flex-direction: row;
+gap: 10px;
 `
 export const TextButtonDoctor = styled(ButtonText)`
 color: white 
