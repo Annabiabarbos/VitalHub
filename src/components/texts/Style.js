@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { TextInputModal } from "../title/Style";
 
 export const Text = styled.Text`
 font-size: 16px;
@@ -21,4 +22,9 @@ export const TextCancelar = styled.Text`
 margin-top: 35px;
 font-family: "MontserratAlternates_600SemiBold";
 text-decoration: underline;
+`
+
+export const TextInputSchedule = styled(TextInputModal)`
+margin-left: -50px;
+
 `

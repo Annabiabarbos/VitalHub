@@ -8,6 +8,7 @@ import { AbsListAppointament } from "../absListAppointment/absListAppointment"
 import { useState } from "react"
 import { Schedule } from "../schedule/Schedule"
 import {Input} from "../input/Style"
+import { TextInputSchedule } from "../texts/Style"
 
 export const ScheduleModal = ({ visible, navigation, setShowScheduleModal, ...rest }) => {
 
@@ -21,7 +22,7 @@ export const ScheduleModal = ({ visible, navigation, setShowScheduleModal, ...re
 
                     <TitleModal>Agendar consulta</TitleModal>
 
-                    <TextInputModal>Qual o nível da consulta  </TextInputModal>
+                    <TextInputSchedule>Qual o nível da consulta  </TextInputSchedule>
 
 
 
@@ -34,13 +35,13 @@ export const ScheduleModal = ({ visible, navigation, setShowScheduleModal, ...re
                         />
 
                         <Schedule
-                            textButton={"realizadas"}
+                            textButton={"Exame"}
                             clickButton={statusLista === "realizado"}
                             onPress={() => setStatusLista("realizado")}
                         />
 
                         <Schedule
-                            textButton={"canceladas"}
+                            textButton={"Urgência"}
                             clickButton={statusLista === "cancelado"}
                             onPress={() => setStatusLista("cancelado")}
                         />

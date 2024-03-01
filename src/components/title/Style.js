@@ -46,10 +46,12 @@ margin-bottom: -10px;
 `
 export const TitleModal = styled(Title)`
 margin-top: 30px;
+
 `
 
 export const TextInputModal = styled(TextInput)`
-margin-left: -20px;
+margin-left: -30px;
+margin-bottom: 5px;
 `
 
 export const TitleClinic = styled(Title)`

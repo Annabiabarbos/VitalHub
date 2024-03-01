@@ -130,19 +130,19 @@ export const ChoiceClinic = ({ navigation }) => {
                         </HourClinic>
                     </ProfileData>
                 </ClinicCard>
-
-
-
-                <ButtonClinic onPress={() => navigation.navigate("ChoiceDoctor")}>
-                    <ButtonTittle>Continuar</ButtonTittle>
-                </ButtonClinic>
-                <ButtonSecondary onPress={() => navigation.navigate("Home")}>
-                    <ButtonSecondaryTitle>
-                        Cancelar
-                    </ButtonSecondaryTitle>
-                </ButtonSecondary>
-
             </ScrollView>
+
+
+            <ButtonClinic onPress={() => navigation.navigate("ChoiceDoctor")}>
+                <ButtonTittle>Continuar</ButtonTittle>
+            </ButtonClinic>
+            <ButtonSecondary onPress={() => navigation.navigate("Home")}>
+                <ButtonSecondaryTitle>
+                    Cancelar
+                </ButtonSecondaryTitle>
+            </ButtonSecondary>
+
+
         </ContainerClinic>
     )
 }

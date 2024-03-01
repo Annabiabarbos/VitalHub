@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Title } from "../../components/title/Style";
 
 export const ContainerCardsList = styled.View`
-    width: 90% ;
+     width: 90% ;
     margin-bottom:12px ;
     padding: 10px 10px;
     border-radius: 5px ;
