@@ -1,13 +1,9 @@
 import { Modal } from "react-native";
-import { AppointmentModalpront, ImageProfile, ImagePront, Informations, ModalContentpront, ProfileImagePront, TextsInformations } from "./Style";
-import { Age, Email, TextInput, Title } from "../title/Style";
+import { AppointmentModalpront,  ImagePront, Informations,  } from "./Style";
+import { Age, Email, Title } from "../title/Style";
 import { Button, ButtonSecondary, ButtonSecondaryTitle, ButtonTitle, TextButtonPront } from "../button/Style";
-import { Input, InputPront, InputProntBig } from "../input/Style";
-import { ButtonTittle } from "../buttonTitle/Style";
-import { Container } from "../container/Style";
 import { ModalContent, ModalText } from "../cancelationModal/Style";
-import { ImageUser } from "../header/Style";
-import { TextsProfile } from "../../sceens/profile/Style";
+
 
 
 

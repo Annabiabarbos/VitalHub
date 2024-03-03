@@ -1,8 +1,8 @@
-import styled from "styled-components";
+import styled from "styled-components/native";
 import { Title } from "../../components/title/Style";
 
 export const ContainerCardsList = styled.View`
-     width: 90% ;
+    width: 90% ;
     margin-bottom:12px ;
     padding: 10px 10px;
     border-radius: 5px ;
@@ -68,9 +68,13 @@ text-transform: uppercase;
 text-align: center;
 `
 export const ClinicCard = styled(DataProfileCard)`
-margin-top: 10px;
-margin-left: 50px;
-margin-bottom: 65px;
+width: 85%;
+height: 35%;
+background-color: white;
+elevation : 8;
+/* box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.08); */
+margin-bottom: 5%;
+border-radius: 5px;
 `
 
 export const ProfileNameClinic =styled(ProfileName)`

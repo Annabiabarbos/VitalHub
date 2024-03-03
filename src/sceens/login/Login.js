@@ -9,7 +9,7 @@ import { Image, Text, TouchableOpacity, View } from "react-native"
 import { ButtonTittle, ButtonTittleGoogle } from "../../components/buttonTitle/Style"
 import { AntDesign } from '@expo/vector-icons';
 import { ContentAccount, TextAccount } from "./Style"
-import { ScrollView } from "../../components/ScrollView/ScrollView"
+
 
 export const Login = ({ navigation }) => {
     return (

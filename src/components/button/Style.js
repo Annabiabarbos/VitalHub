@@ -70,6 +70,8 @@ align-self: center;
 justify-content: center;
 `
 export const ButtonEditMedRec = styled(ButtonEdit)`
+align-items: center;
+margin-left: 0x;
 `
 export const ButtonEditProfile = styled(ButtonEdit)
 ``

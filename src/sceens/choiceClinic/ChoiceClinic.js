@@ -2,23 +2,25 @@ import { ScrollView, Text } from "react-native"
 import { Container } from "../../components/container/Style"
 import { Title, TitleClinic } from "../../components/title/Style"
 import { ButtonText, ClinicCard, DataProfileCard, ProfileData, ProfileName, ProfileNameClinic, TextAge, TextBold } from "../../components/appointmentCard/Style"
-import { CalendarImage, ClassificationClinic, ContainerClinic, FilterAppointamentClinic, HourClinic, ImageClassification, TitleHour, ClassificationTittle, TitleClassification } from "./Style"
+import { CalendarImage, ClassificationClinic, ContainerClinic, FilterAppointamentClinic, HourClinic, ImageClassification, StarText, TitleHour } from "./Style"
 import { FilterAppointament } from "../home/style"
 import { Button, ButtonClinic, ButtonSecondary, ButtonSecondaryTitle } from "../../components/button/Style"
 import { ButtonTittle } from "../../components/buttonTitle/Style"
+import { ScrollClinic } from "../../components/scrollView/ScrollView"
 
 export const ChoiceClinic = ({ navigation }) => {
     return (
         <ContainerClinic>
             <TitleClinic>Selecionar clínica</TitleClinic>
-            <ScrollView>
-
-
+            <ScrollClinic>
                 <ClinicCard>
-                    <ProfileNameClinic>Clinica Natureh</ProfileNameClinic>
+                    <ProfileNameClinic>Diamond e cash</ProfileNameClinic>
                     <ClassificationClinic>
-                        <ImageClassification source={require('../../../assets/star.png')} />
-                        <TitleClassification>4,5</TitleClassification>
+                        <StarText>
+                            <ImageClassification source={require('../../../assets/star.png')} />
+                            <Text>4,5</Text>
+                        </StarText>
+
                     </ClassificationClinic>
                     <ProfileData>
                         <TextBold>São Paulo, SP</TextBold>
@@ -29,54 +31,15 @@ export const ChoiceClinic = ({ navigation }) => {
                     </ProfileData>
                 </ClinicCard>
 
-                <ClinicCard>
-                    <ProfileNameClinic>Diamond Pró-Mulher</ProfileNameClinic>
-                    <ClassificationClinic>
-                        <ImageClassification source={require('../../../assets/star.png')} />
-                        <TitleClassification>4,8</TitleClassification>
-                    </ClassificationClinic>
-                    <ProfileData>
-                        <TextBold>São Paulo, SP</TextBold>
-                        <HourClinic>
-                            <CalendarImage source={require('../../../assets/CalendarIcon.png')} />
-                            <TitleHour>Seg-Sex</TitleHour>
-                        </HourClinic>
-                    </ProfileData>
-                </ClinicCard>
-                <ClinicCard>
-                    <ProfileNameClinic>Clinica Villa Lobos</ProfileNameClinic>
-                    <ClassificationClinic>
-                        <ImageClassification source={require('../../../assets/star.png')} />
-                        <TitleClassification>4,2</TitleClassification>
-                    </ClassificationClinic>
-                    <ProfileData>
-                        <TextBold>Taboão, SP</TextBold>
-                        <HourClinic>
-                            <CalendarImage source={require('../../../assets/CalendarIcon.png')} />
-                            <TitleHour>Seg-Sab</TitleHour>
-                        </HourClinic>
-                    </ProfileData>
-                </ClinicCard>
-                <ClinicCard>
-                    <ProfileNameClinic>SP Oncologia Clínica</ProfileNameClinic>
-                    <ClassificationClinic>
-                        <ImageClassification source={require('../../../assets/star.png')} />
-                        <TitleClassification>4,2</TitleClassification>
 
-                    </ClassificationClinic>
-                    <ProfileData>
-                        <TextBold>Taboão, SP</TextBold>
-                        <HourClinic>
-                            <CalendarImage source={require('../../../assets/CalendarIcon.png')} />
-                            <TitleHour>Seg-Sab</TitleHour>
-                        </HourClinic>
-                    </ProfileData>
-                </ClinicCard>
                 <ClinicCard>
-                    <ProfileNameClinic>Clinica Natureh</ProfileNameClinic>
+                    <ProfileNameClinic>Diamond e cash</ProfileNameClinic>
                     <ClassificationClinic>
-                        <ImageClassification source={require('../../../assets/star.png')} />
-                        <TitleClassification>4,5</TitleClassification>
+                        <StarText>
+                            <ImageClassification source={require('../../../assets/star.png')} />
+                            <Text>4,5</Text>
+                        </StarText>
+
                     </ClassificationClinic>
                     <ProfileData>
                         <TextBold>São Paulo, SP</TextBold>
@@ -87,11 +50,15 @@ export const ChoiceClinic = ({ navigation }) => {
                     </ProfileData>
                 </ClinicCard>
 
+
                 <ClinicCard>
-                    <ProfileNameClinic>Diamond Pró-Mulher</ProfileNameClinic>
+                    <ProfileNameClinic>Diamond e cash</ProfileNameClinic>
                     <ClassificationClinic>
-                        <ImageClassification source={require('../../../assets/star.png')} />
-                        <TitleClassification>4,8</TitleClassification>
+                        <StarText>
+                            <ImageClassification source={require('../../../assets/star.png')} />
+                            <Text>4,5</Text>
+                        </StarText>
+
                     </ClassificationClinic>
                     <ProfileData>
                         <TextBold>São Paulo, SP</TextBold>
@@ -101,37 +68,7 @@ export const ChoiceClinic = ({ navigation }) => {
                         </HourClinic>
                     </ProfileData>
                 </ClinicCard>
-                <ClinicCard>
-                    <ProfileNameClinic>Clinica Villa Lobos</ProfileNameClinic>
-                    <ClassificationClinic>
-                        <ImageClassification source={require('../../../assets/star.png')} />
-                        <TitleClassification>4,2</TitleClassification>
-                    </ClassificationClinic>
-                    <ProfileData>
-                        <TextBold>Taboão, SP</TextBold>
-                        <HourClinic>
-                            <CalendarImage source={require('../../../assets/CalendarIcon.png')} />
-                            <TitleHour>Seg-Sab</TitleHour>
-                        </HourClinic>
-                    </ProfileData>
-                </ClinicCard>
-                <ClinicCard>
-                    <ProfileNameClinic>SP Oncologia Clínica</ProfileNameClinic>
-                    <ClassificationClinic>
-                        <ImageClassification source={require('../../../assets/star.png')} />
-                        <TitleClassification>4,2</TitleClassification>
-
-                    </ClassificationClinic>
-                    <ProfileData>
-                        <TextBold>Taboão, SP</TextBold>
-                        <HourClinic>
-                            <CalendarImage source={require('../../../assets/CalendarIcon.png')} />
-                            <TitleHour>Seg-Sab</TitleHour>
-                        </HourClinic>
-                    </ProfileData>
-                </ClinicCard>
-            </ScrollView>
-
+            </ScrollClinic>
 
             <ButtonClinic onPress={() => navigation.navigate("ChoiceDoctor")}>
                 <ButtonTittle>Continuar</ButtonTittle>
@@ -141,7 +78,6 @@ export const ChoiceClinic = ({ navigation }) => {
                     Cancelar
                 </ButtonSecondaryTitle>
             </ButtonSecondary>
-
 
         </ContainerClinic>
     )

@@ -1,4 +1,4 @@
-import { ContainerScroll } from "../../components/ScrollView/ScrollView"
+import { ContainerScroll } from "../../components/scrollView/ScrollView"
 import { Informations, ProfileImagePront } from "../../components/appointmentModal/Style"
 import { Button, ButtonCancell, ButtonEdit, ButtonEditMedRec, ButtonSecondary, ButtonSecondaryTitle, ButtonTitle } from "../../components/button/Style"
 import { Container } from "../../components/container/Style"
@@ -44,7 +44,7 @@ export const MedicalRecordEdit = ({navigation}) => {
                     <ButtonTitle>Salvar</ButtonTitle>
                 </Button>
 
-                <Button>
+                <Button onPress={() => navigation.navigate("MedicalRecord")}>
                     <ButtonTitle>Editar</ButtonTitle>
                 </Button>
 

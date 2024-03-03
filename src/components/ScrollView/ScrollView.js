@@ -10,3 +10,6 @@ export const ContainerScroll = styled.ScrollView`
 export const ContainerScrollProfile = styled(ContainerScroll)`
     margin-left: 10px;
 `
+export const ScrollClinic = styled(ContainerScroll)`
+background-color: transparent;
+`

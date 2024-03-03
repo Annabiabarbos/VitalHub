@@ -1,12 +1,10 @@
 
-import { ScrollView } from "react-native"
 import { Informations, ProfileImagePront } from "../../components/appointmentModal/Style"
-import { Button, ButtonCancell, ButtonEdit, ButtonEditMedRec, ButtonSecondary, ButtonSecondaryTitle, ButtonTitle } from "../../components/button/Style"
+import { Button, ButtonCancell, ButtonEditMedRec, ButtonSecondary, ButtonSecondaryTitle, ButtonTitle } from "../../components/button/Style"
 import { Container } from "../../components/container/Style"
 import { InputPront, InputProntBig } from "../../components/input/Style"
-import { Age, Email, TextInput, TextInputDesc, TextInputDiag, TextInputMed, Title } from "../../components/title/Style"
-import { ContainerScroll, ContainerScrollProfile, ScrollViewMedRec } from "../../components/ScrollView/ScrollView"
-import { ViewInput, ViewMedRec } from "./Style"
+import { Age, Email,  TextInputDesc, TextInputDiag, TextInputMed, Title } from "../../components/title/Style"
+import { ContainerScrol, ContainerScroll } from "../../components/scrollView/ScrollView"
 
 
 export const MedicalRecord = ({ navigation }) => {

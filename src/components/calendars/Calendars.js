@@ -1,28 +1,10 @@
-import { ButtonSecondary, ButtonSecondaryTitle } from "../../components/button/Style"
-import { ButtonTittle } from "../../components/buttonTitle/Style"
-import { Container } from "../../components/container/Style"
-import { InputSelect } from "../../components/input/Style"
-import { TitleDate } from "../../components/title/Style"
-import { ButtonChoiceDoctor, TitleCard } from "../choiceDoctor/Style"
-import { ButtonSelectDate, ContainerDate, InputHour, InputIcon, InputView } from "./Style"
 import React, { useState } from 'react';
 import { Calendar, LocaleConfig } from 'react-native-calendars';
 
+
 LocaleConfig.locales['pt-br'] = {
     monthNames: [
-        'Janeiro',
-        'Fevereiro',
-        'Março',
-        'Abril',
-        'Maio',
-        'Junho',
-        'Julho',
-        'Agosto',
-        'Setembro',
-        'Outubro',
-        'Novembro',
-        'Dezembro'
-    ],
+        'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
     dayNames: [
         'Domingo',
         'Segunda-feira',
@@ -37,10 +19,11 @@ LocaleConfig.locales['pt-br'] = {
 
 LocaleConfig.defaultLocale = 'pt-br';
 
-export const SelectDate = ({ navigation }) => {
+export const CustomCalendar = () => {
     const [selected, setSelected] = useState('');
+
     return (
-        <ContainerDate>
+    
             <Calendar
                 style={{
                     width: 350,
@@ -66,25 +49,9 @@ export const SelectDate = ({ navigation }) => {
                     [selected]: { selected: true, disableTouchEvent: true }
                 }}
             />
-
             
+         
+    );
+};
 
-            <InputSelect 
-            />
-
-            <ButtonSelectDate>
-                <ButtonTittle>Confirmar</ButtonTittle>
-            </ButtonSelectDate>
-
-            <ButtonSecondary onPress={() => navigation.navigate("ChoiceDoctor")}>
-                <ButtonSecondaryTitle>
-                    Cancelar
-                </ButtonSecondaryTitle>
-            </ButtonSecondary>
-
-        </ContainerDate>
-
-
-    )
-
-}
+export default CustomCalendar;

@@ -30,17 +30,7 @@ export const Home = ({ navigation }) => {
     const [showModalAppointment, setShowModalAppointment] = useState(false);
     const [showScheduleModal, setShowScheduleModal] = useState(false)
 
-    // useEffect(() => {
-
-        
-        
-
-    // }, [])
-
-
-
-
-
+    
     return (
         <Container>
 

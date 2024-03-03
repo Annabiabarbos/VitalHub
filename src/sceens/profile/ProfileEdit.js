@@ -1,8 +1,7 @@
-import { ContainerScrollProfile } from "../../components/ScrollView/ScrollView"
+import { ContainerScrollProfile } from "../../components/scrollView/ScrollView"
 import { ButtonTextProfile } from "../../components/appointmentCard/Style"
-import { ButtonEdit, ButtonExit, ButtonProfile, ButtonSecondary, ButtonSecondaryTitle } from "../../components/button/Style"
+import { ButtonProfile, ButtonSecondary, ButtonSecondaryTitle } from "../../components/button/Style"
 import { InputAddress, InputProfile } from "../../components/input/Style"
-import { Text } from "../../components/texts/Style"
 import { Address, EmailProfile, InputCep, InputCity, NameProfile, ProfileContainer, ProfileImage, ProfileNameView, TextsProfile } from "./Style"
 
 export const ProfileEdit = ({ navigation }) => {

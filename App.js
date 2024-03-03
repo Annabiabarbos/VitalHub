@@ -1,4 +1,5 @@
-
+import { StatusBar } from "expo-status-bar";
+import { StyleSheet } from "react-native";
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { NavigationContainer } from "@react-navigation/native";
 import { Navigation } from "./src/sceens/navigation/Navigation";
@@ -8,20 +9,19 @@ const Stack = createNativeStackNavigator()
 import { useFonts, MontserratAlternates_600SemiBold, MontserratAlternates_500Medium, MontserratAlternates_700Bold, Quicksand_500Medium, Quicksand_700Bold, Quicksand_600SemiBold } from "@expo-google-fonts/montserrat-alternates";
 import { Login } from "./src/sceens/login/Login";
 
+import {Verify } from "./src/sceens/emailVerify/EmailVerify";
 
 import { NewPassword } from "./src/sceens/newPassword/NewPassword";
 import { NewAccount } from "./src/sceens/newAccount/NewAccount"
 import { Password } from "./src/sceens/password/Password"
 import { Home } from "./src/sceens/home/Home";
-import { Profile } from "./src/sceens/profile/Profile";
-import { MedicalRecord } from "./src/sceens/MedicalRecord/MedicalRecord";
-import { ProfileEdit } from "./src/sceens/profile/ProfileEdit";
-import { MedicalRecordEdit } from "./src/sceens/MedicalRecord/MedicalRecordEdit";
+import { Profile } from "./src/sceens/Profile/Profile";
+import {MedicalRecord} from "./src/sceens/medicalRecord/MedicalRecord"
+import {ProfileEdit} from "./src/sceens/Profile/ProfileEdit"
+import { MedicalRecordEdit } from "./src/sceens/medicalRecord/MedicalRecordEdit";
 import { ChoiceClinic } from "./src/sceens/choiceClinic/ChoiceClinic";
 import { ChoiceDoctor } from "./src/sceens/choiceDoctor/ChoiceDoctor";
-import { SelectDate } from "./src/sceens/selectDate/SelectDate";
-import { Verify } from "./src/sceens/emailVerify/EmailVerify"
-
+import { TelaCalendars } from "./src/sceens/telaCalendars/TelaCalendars";
 
 
 
@@ -65,6 +65,11 @@ export default function app() {
 
           //titulo da tela
           options={{ title: 'Navigation' }}
+        />
+        <Stack.Screen
+          name="TelaCalendars"
+          component={TelaCalendars}
+          options={{ title: "TelaCalendars" }}
         />
         <Stack.Screen
           name="ProfileEdit"
@@ -134,13 +139,6 @@ export default function app() {
           component={ChoiceDoctor}
           options={{ title: "ChoiceDoctor" }}
         />
-
-        <Stack.Screen
-          name="SelectDate"
-          component={SelectDate}
-          options={{ title: "SelectDate" }}
-        />
-
 
       </Stack.Navigator>
 
