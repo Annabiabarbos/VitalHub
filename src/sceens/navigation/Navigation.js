@@ -1,19 +1,23 @@
 import { Button, View } from "react-native"
 
-export  const Navigation = ({navigation}) => {
-    return(
-        <View style={{flex: 1, alignItems: "center" , justifyContent: "center" }}>
+export const Navigation = ({ navigation }) => {
+    return (
+        <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
             <Button
-            title="Login"
-            onPress={() => navigation.navigate ("Login")}
+                title="Login"
+                onPress={() => navigation.navigate("Login")}
             />
             <Button
-            title="Profile"
-            onPress={() => navigation.navigate ("Profile")}
+                title="Profile"
+                onPress={() => navigation.navigate("Profile")}
             />
 
+            <Button
+                title="Maps"
+                onPress={() => navigation.navigate("Maps")}
+            />
         </View>
-        
+
     )
 }
 

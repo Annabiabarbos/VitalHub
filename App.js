@@ -9,20 +9,21 @@ const Stack = createNativeStackNavigator()
 import { useFonts, MontserratAlternates_600SemiBold, MontserratAlternates_500Medium, MontserratAlternates_700Bold, Quicksand_500Medium, Quicksand_700Bold, Quicksand_600SemiBold } from "@expo-google-fonts/montserrat-alternates";
 import { Login } from "./src/sceens/login/Login";
 
-import {Verify } from "./src/sceens/emailVerify/EmailVerify";
+import { Verify } from "./src/sceens/emailVerify/EmailVerify";
 
 import { NewPassword } from "./src/sceens/newPassword/NewPassword";
 import { NewAccount } from "./src/sceens/newAccount/NewAccount"
 import { Password } from "./src/sceens/password/Password"
 import { Home } from "./src/sceens/home/Home";
 import { Profile } from "./src/sceens/profile/Profile";
-import {ProfileEdit} from "./src/sceens/profile/ProfileEdit"
-import {MedicalRecord} from "./src/sceens/medicalRecord/MedicalRecord"
-import {MedicalRecordEdit} from "./src/sceens/medicalRecord/MedicalRecordEdit"
+import { ProfileEdit } from "./src/sceens/profile/ProfileEdit"
+import { MedicalRecord } from "./src/sceens/medicalRecord/MedicalRecord"
+import { MedicalRecordEdit } from "./src/sceens/medicalRecord/MedicalRecordEdit"
 
 import { ChoiceClinic } from "./src/sceens/choiceClinic/ChoiceClinic";
 import { ChoiceDoctor } from "./src/sceens/choiceDoctor/ChoiceDoctor";
 import { TelaCalendars } from "./src/sceens/telaCalendars/TelaCalendars";
+import { Maps } from "./src/sceens/maps/Maps";
 
 
 
@@ -141,6 +142,12 @@ export default function app() {
           options={{ title: "ChoiceDoctor" }}
         />
 
+
+        <Stack.Screen
+          name="Maps"
+          component={Maps}
+          options={{ title: "Maps" }}
+        />
       </Stack.Navigator>
 
     </NavigationContainer>

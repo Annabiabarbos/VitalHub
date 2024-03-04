@@ -22,3 +22,6 @@ margin-top: 35px;
 font-family: "MontserratAlternates_600SemiBold";
 text-decoration: underline;
 `
+export const TextMaps = styled(Text)`
+align-self: flex-start;
+`
