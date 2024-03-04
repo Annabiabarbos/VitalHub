@@ -1,11 +1,10 @@
-
 import { Informations, ProfileImagePront } from "../../components/appointmentModal/Style"
-import { Button, ButtonCancell, ButtonEditMedRec, ButtonSecondary, ButtonSecondaryTitle, ButtonTitle } from "../../components/button/Style"
+import { Button, ButtonCancell, ButtonEditMedRec, ButtonSecondaryTitle, ButtonTitle } from "../../components/button/Style"
+import { ButtonTittle } from "../../components/buttonTitle/Style"
 import { Container } from "../../components/container/Style"
 import { InputPront, InputProntBig } from "../../components/input/Style"
-import { Age, Email,  TextInputDesc, TextInputDiag, TextInputMed, Title } from "../../components/title/Style"
-import { ContainerScrol, ContainerScroll } from "../../components/scrollView/ScrollView"
-
+import { ContainerScroll } from "../../components/scrollView/ScrollView"
+import { Age, Email, TextInputDesc, TextInputDiag, TextInputMed, Title } from "../../components/title/Style"
 
 export const MedicalRecord = ({ navigation }) => {
     return (
@@ -45,7 +44,7 @@ export const MedicalRecord = ({ navigation }) => {
                     placeholder="Prescrição médica"
                 />
                 <Button onPress={() => navigation.navigate("MedicalRecordEdit")}>
-                    <ButtonTitle>Salvar</ButtonTitle>
+                    <ButtonTittle>Salvar</ButtonTittle>
                 </Button>
 
                 <ButtonEditMedRec>

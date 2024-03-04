@@ -94,3 +94,6 @@ border-color: #60BFC5;;
 export const ButtonClinic =styled(Button)`
 margin-left: 20px;
 `
+export const ButtonSecondaryModal = styled(ButtonSecondary)`
+margin-top: -140px;
+`

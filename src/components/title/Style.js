@@ -55,3 +55,15 @@ margin-left: -20px;
 export const TitleClinic = styled(Title)`
 align-self: center;
 `
+
+export const TextModalConfirmation = styled(TextInputModal)`
+margin-right: 100px;
+`
+
+export const Informationsmodal = styled.Text`    
+font-family: "Quicksand_500Medium";
+font-size: 14px;
+margin-top: 15px ;
+margin-right: 70;
+color: #4E4B59;
+`
