@@ -12,6 +12,10 @@ import { ContentAccount, TextAccount } from "./Style"
 
 
 export const Login = ({ navigation }) => {
+    async function Login(){
+        navigation.navigate("Main")
+    }
+
     return (
 
         <Container>
@@ -36,7 +40,7 @@ export const Login = ({ navigation }) => {
                 > Esqueceu sua senha?</LinkMedium>
 
                 <Button
-                    onPress={() => navigation.navigate("Home")}
+                    onPress={() => Login()}
                 >
                     <ButtonTittle
                     >Entrar</ButtonTittle>

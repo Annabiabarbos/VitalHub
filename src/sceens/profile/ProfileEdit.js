@@ -39,7 +39,7 @@ export const ProfileEdit = ({ navigation }) => {
                     <ButtonTextProfile
                     >Editar</ButtonTextProfile>
                 </ButtonProfile>
-                <ButtonSecondary onPress={() => navigation.navigate("Navigation")}>
+                <ButtonSecondary onPress={() => navigation.navigate("Home")}>
                     <ButtonSecondaryTitle>
                         Cancelar
                     </ButtonSecondaryTitle>
