@@ -26,9 +26,14 @@ export const InputProntBig = styled(Input)`
 height: 120px ;
 margin-top: 10px;
 `   
-export const InputProntBigEdit = styled(InputProntBig)`
+export const InputProntBigEdit = styled(InputProntBig).attrs({
+    placeholderTextColor: "#4E4B59"
+})`
 background-color: #E6E6E6;
 border-color: transparent;
+align-items: center;
+
+flex-direction: row;
 `
 export const InputProntEdit = styled(Input)`
 background-color: #E6E6E6;

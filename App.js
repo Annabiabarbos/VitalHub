@@ -24,6 +24,7 @@ import { ChoiceClinic } from "./src/sceens/choiceClinic/ChoiceClinic";
 import { ChoiceDoctor } from "./src/sceens/choiceDoctor/ChoiceDoctor";
 import { TelaCalendars } from "./src/sceens/telaCalendars/TelaCalendars";
 import { Maps } from "./src/sceens/maps/Maps";
+import { Prescription } from "./src/sceens/prescription/Prescription";
 
 
 
@@ -36,7 +37,7 @@ export default function app() {
     MontserratAlternates_700Bold,
     Quicksand_500Medium,
     Quicksand_700Bold,
-    Quicksand_600SemiBold
+    Quicksand_600SemiBold,
 
   });
 
@@ -148,6 +149,15 @@ export default function app() {
           component={Maps}
           options={{ title: "Maps" }}
         />
+
+        <Stack.Screen
+          name="Prescription"
+          component={Prescription}
+          options={{ title: "Prescription" }}
+        />
+
+
+
       </Stack.Navigator>
 
     </NavigationContainer>

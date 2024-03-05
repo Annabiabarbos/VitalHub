@@ -11,6 +11,12 @@ export const InputMaps = styled(InputProntEdit)`
 export const InputMapsMini = styled(InputMaps)`
 height: 53px;
 width: 144px;
+align-self: center;
+margin-left: -10px;
 `
 export const ViewNumber = styled.View`
+`
+export const ImageMaps = styled.Image`
+width: 100%;
+height: 324px;
 `

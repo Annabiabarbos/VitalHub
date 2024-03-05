@@ -15,7 +15,7 @@ export const ChoiceDoctor = ({navigation}) => {
 
                 <DoctorCard>
                     <ContCard>
-                        <ImageCard source={{ uri: "../../../assets/Doctor1.png" }} />
+                        <ImageCard source={require("../../../assets/Doctor1.png")} />
                         <TitleCard>Dra Alessandra</TitleCard>
                     </ContCard>
                     <TextArea>Dermatologia, Esteticista</TextArea>

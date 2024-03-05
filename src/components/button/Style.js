@@ -97,3 +97,14 @@ margin-left: 20px;
 export const ButtonSecondaryModal = styled(ButtonSecondary)`
 margin-top: -140px;
 `
+
+export const ButtonPrescription = styled.TouchableOpacity`
+width: 170px;
+height: 44px;
+background-color: #49B3BA;
+border-radius: 5px;
+margin-top: 5px;
+`
+export const ButtonPrescriptionTittle = styled(ButtonTitle)`
+margin-bottom: -100px;
+`

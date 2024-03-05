@@ -23,5 +23,12 @@ font-family: "MontserratAlternates_600SemiBold";
 text-decoration: underline;
 `
 export const TextMaps = styled(Text)`
-align-self: flex-start;
+align-self: center;
+margin-top: -10px;
+`
+
+export const TextsPrescription = styled.Text`
+font-family: "MontserratAlternates_500Medium";
+font-size: 14px;
+align-items: center;
 `
