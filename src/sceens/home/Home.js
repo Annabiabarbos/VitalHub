@@ -37,7 +37,7 @@ export const Home = ({ navigation }) => {
             <StatusBar />
 
             {/* Header */}
-            <Header onPress={() => navigation.navigate("Profile")}/>
+            <Header navigation={navigation}/>
 
             {/* Calendar */}
             <HomeCalendar />
@@ -47,7 +47,7 @@ export const Home = ({ navigation }) => {
 
 
 
-            <FilterAppointament>
+            <FilterAppointament >
 
                 <AbsListAppointament
                     textButton={"Agendadas"}
@@ -67,17 +67,17 @@ export const Home = ({ navigation }) => {
                     onPress={() => setStatusLista("cancelado")}
                 />
 
-            </FilterAppointament>
+            </FilterAppointament> 
             {/* cards */}
             {/* lista (flatlist) */}
 
-            <ListComponent
+            <ListComponent 
                 data={Consultas}
                 keyExtractor={(item) => item.id}
 
                 renderItem={({ item }) =>
                     statusLista == item.situacao && (
-                        <AppointmentCard
+                        <AppointmentCard navigation={navigation}
                             situacao={item.situacao}
                             onPressCancel={() => setShowModalCancel(true)}
                             onPressAppointment={() => setShowModalAppointment(true)}

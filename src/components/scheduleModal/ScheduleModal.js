@@ -1,7 +1,7 @@
 import { Modal } from "react-native"
 import { ModalContent, ModalSchedule, ModalText, PatientModal } from "../cancelationModal/Style"
 import { TextInput, TextInputModal, Title, TitleModal } from "../title/Style"
-import { Button, ButtonSecondary, ButtonSecondaryTitle } from "../button/Style"
+import { Button, ButtonModal, ButtonSecondary, ButtonSecondaryTitle } from "../button/Style"
 import { ButtonTittle } from "../buttonTitle/Style"
 import { FilterAppointament } from "../../sceens/home/style"
 import { AbsListAppointament } from "../absListAppointment/absListAppointment"
@@ -55,14 +55,14 @@ export const ScheduleModal = ({ visible, navigation, setShowScheduleModal, ...re
                     placeholder={"Informe a localização"}
                     />
 
-                    <Button onPress={() => {
+                    <ButtonModal onPress={() => {
                         //ao clicar no botão continuar ele irá fechar o modal
                         setShowScheduleModal(false)
                         //E aqui levará para a página de selecionar cliníca
                             navigation.navigate("ChoiceClinic")
                     }}>
                         <ButtonTittle>Continuar</ButtonTittle>
-                    </Button>
+                    </ButtonModal>
 
                     <ButtonSecondary onPress={() => setShowScheduleModal(false)}>
                         <ButtonSecondaryTitle>

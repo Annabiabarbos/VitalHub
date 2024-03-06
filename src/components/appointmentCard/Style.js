@@ -1,7 +1,7 @@
 import styled from "styled-components/native";
 import { Title } from "../../components/title/Style";
 
-export const ContainerCardsList = styled.View`
+export const ContainerCardsList = styled.TouchableOpacity`
     width: 90% ;
     margin-bottom:12px ;
     padding: 10px 10px;

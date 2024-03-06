@@ -108,3 +108,7 @@ margin-top: 5px;
 export const ButtonPrescriptionTittle = styled(ButtonTitle)`
 margin-bottom: -100px;
 `
+
+export const ButtonModal = styled(Button)`
+margin-top: 40%;
+`

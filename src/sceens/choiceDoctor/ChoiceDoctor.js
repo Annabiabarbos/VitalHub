@@ -1,9 +1,8 @@
 import { ScrollView } from "react-native"
 import { Container } from "../../components/container/Style"
 import { Title } from "../../components/title/Style"
-import { ButtonChoiceDoctor, ContCard, DoctorCard, FilterAppointamentDoctor, ImageCard, TextArea, TextButtonDoctor, TitleCard } from "./Style"
+import { ButtonChoiceDoctor, ContCard, DoctorCard, ImageCard, TextArea, TitleCard } from "./Style"
 import { Button, ButtonSecondary, ButtonSecondaryTitle } from "../../components/button/Style"
-import { ButtonText } from "../../components/appointmentCard/Style"
 import { ButtonTittle } from "../../components/buttonTitle/Style"
 
 export const ChoiceDoctor = ({navigation}) => {

@@ -4,12 +4,13 @@ import { MaterialIcons } from "@expo/vector-icons";
 
 export const Header = ({navigation}) => {
   return (
-    <ContainerHeader>
-        <BoxUser>
-          <ImageUser source={{ uri: "https://github.com/abbarbosa.png" }} />
+    <ContainerHeader >
+        <BoxUser onPress={() => navigation.navigate("Profile")}>
+          <ImageUser
+          source={{ uri: "https://github.com/abbarbosa.png" }} />
           <DataUser>
-            <TextDefault onPress={() => navigation.navigate("Profile")}>Bem vindo(a)</TextDefault>
-            <NameUser >Dra.Anna Beatriz</NameUser>
+            <TextDefault>Bem vindo(a)</TextDefault>
+            <NameUser  >Dra.Anna Beatriz</NameUser>
           </DataUser>
         </BoxUser>
 

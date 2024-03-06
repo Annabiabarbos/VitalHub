@@ -22,17 +22,17 @@ export const AppointmentCard = ({
 }) => {
   return (
     // container principal
-    <ContainerCardsList>
+    <ContainerCardsList onPress={onPressAppointment}>
       {/* imagem de perfil */}
       <ProfileImage source={{ uri: "https://github.com/ojuaum1.png" }} />
 
       {/* conteúdo ao lado da imagem de perfil */}
       <ContentCard>
         <DataProfileCard>
-          <ProfileName>João</ProfileName>
+          <ProfileName >João</ProfileName>
 
           <ProfileData>
-            <TextAge>45 anos</TextAge>
+            <TextAge>19 anos</TextAge>
             <TextBold>Rotina</TextBold>
           </ProfileData>
         </DataProfileCard>

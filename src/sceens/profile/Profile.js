@@ -48,11 +48,7 @@ export const Profile = ({ navigation }) => {
                         Sair do app
                     </ButtonTextProfile>
                 </ButtonExit>
-                <ButtonSecondary onPress={() => navigation.navigate("Home")}>
-                    <ButtonSecondaryTitle>
-                        Cancelar
-                    </ButtonSecondaryTitle>
-                </ButtonSecondary>
+                
             </ContainerScrollProfile>
         </ProfileContainer>
     )
