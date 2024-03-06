@@ -41,13 +41,13 @@ export const MedicalRecord = ({ navigation }) => {
                     Prescrição médica
                 </TextInputMed>
                 <InputProntBig
-                    placeholder="Prescrição médica"
+                    placeholder="Prescrição médica" 
                 />
-                <Button onPress={() => navigation.navigate("MedicalRecordEdit")}>
+                <Button onPress={() => navigation.navigate("MedicalRecord")}>
                     <ButtonTittle>Salvar</ButtonTittle>
                 </Button>
 
-                <ButtonEditMedRec>
+                <ButtonEditMedRec onPress={() => navigation.navigate("MedicalRecordEdit")}>
                     <ButtonTitle>Editar</ButtonTitle>
                 </ButtonEditMedRec>
 

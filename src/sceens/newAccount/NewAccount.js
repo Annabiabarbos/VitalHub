@@ -30,7 +30,7 @@ export const NewAccount = ({ navigation }) => {
                 placeholder="Confirmar Senha"
                 secureTextEntry
             />
-            <Button onPress={() => navigation.navigate("Home")}>
+            <Button onPress={() => navigation.navigate("Login")}>
                 <ButtonTittle
                 >Cadastrar</ButtonTittle>
             </Button>

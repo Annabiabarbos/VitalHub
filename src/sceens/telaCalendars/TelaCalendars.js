@@ -4,9 +4,9 @@ import CustomCalendar from "../../components/calendars/Calendars";
 import { Title } from "../../components/title/Style";
 import { InputSelect } from "../../components/input/Style";
 import { Button, ButtonSecondary, ButtonSecondaryTitle } from "../../components/button/Style";
-import { ButtonText, ButtonTextProfile } from "../../components/appointmentCard/Style";
+import { ButtonTextProfile } from "../../components/appointmentCard/Style";
 import { ConfirmModal } from "../../components/confirmModal/ConfirmModal";
-import { useEffect, useState } from "react"
+import { useState } from "react"
 
 
 export const TelaCalendars = ({ navigation }) => {
@@ -24,7 +24,7 @@ export const TelaCalendars = ({ navigation }) => {
                 setShowConfirmationModal={setShowConfirmationModal}
                 navigation={navigation}
             />
-            <Button onPress={() => { setShowConfirmationModal(true) }}>
+            <Button onPress={() => navigation.navigate("Main")}>
                 <ButtonTextProfile>Continuar</ButtonTextProfile>
             </Button>
 

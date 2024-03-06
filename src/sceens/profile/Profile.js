@@ -1,9 +1,9 @@
 
-import {  ContainerScrollProfile } from "../../components/scrollView/ScrollView"
-import {  ButtonTextProfile } from "../../components/appointmentCard/Style"
+import { ContainerScrollProfile } from "../../components/scrollView/ScrollView"
+import { ButtonTextProfile } from "../../components/appointmentCard/Style"
 import { ButtonEditMedRec, ButtonExit, ButtonProfile, ButtonSecondary, ButtonSecondaryTitle } from "../../components/button/Style"
-import {  InputAddress, InputProfile } from "../../components/input/Style"
-import { Address, EmailProfile, InputCep, InputCity, NameProfile, ProfileContainer, ProfileImage,  ProfileNameView, TextsProfile } from "./Style"
+import { InputAddress, InputProfile } from "../../components/input/Style"
+import { Address, EmailProfile, InputCep, InputCity, NameProfile, ProfileContainer, ProfileImage, ProfileNameView, TextsProfile } from "./Style"
 
 
 
@@ -33,20 +33,22 @@ export const Profile = ({ navigation }) => {
                         <InputAddress />
                     </InputCity>
                 </Address>
-                <ButtonProfile onPress={() => navigation.navigate("ProfileEdit")}>
-                    <ButtonTextProfile 
+                <ButtonProfile onPress={() => navigation.navigate("Profile")}>
+                    <ButtonTextProfile
                     >Salvar</ButtonTextProfile>
                 </ButtonProfile>
-                <ButtonEditMedRec>
+
+                <ButtonProfile onPress={() => navigation.navigate("ProfileEdit")}>
                     <ButtonTextProfile
-                    >Editar</ButtonTextProfile>
-                </ButtonEditMedRec>
+                    >Editar perfil</ButtonTextProfile>
+                </ButtonProfile>
+
                 <ButtonExit onPress={() => navigation.navigate("Login")}>
                     <ButtonTextProfile>
                         Sair do app
                     </ButtonTextProfile>
                 </ButtonExit>
-                <ButtonSecondary onPress={() => navigation.navigate("Navigation")}>
+                <ButtonSecondary onPress={() => navigation.navigate("Home")}>
                     <ButtonSecondaryTitle>
                         Cancelar
                     </ButtonSecondaryTitle>

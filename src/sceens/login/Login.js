@@ -5,7 +5,6 @@ import { Container } from "../../components/container/Style"
 import { Input } from "../../components/input/Style"
 import { LinkBold, LinkMedium } from "../../components/links/Style"
 import { Button, ButtonGoogle } from "../../components/button/Style"
-import { Image, Text, TouchableOpacity, View } from "react-native"
 import { ButtonTittle, ButtonTittleGoogle } from "../../components/buttonTitle/Style"
 import { AntDesign } from '@expo/vector-icons';
 import { ContentAccount, TextAccount } from "./Style"
@@ -13,7 +12,7 @@ import { ContentAccount, TextAccount } from "./Style"
 
 export const Login = ({ navigation }) => {
     async function Login(){
-        navigation.navigate("Main")
+        navigation.replace("Main")
     }
 
     return (

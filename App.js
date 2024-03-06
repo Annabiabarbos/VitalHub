@@ -2,7 +2,7 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet } from "react-native";
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { NavigationContainer } from "@react-navigation/native";
-import { Navigation } from "./src/sceens/navigation/Navigation";
+
 
 const Stack = createNativeStackNavigator()
 
@@ -16,7 +16,6 @@ import { NewAccount } from "./src/sceens/newAccount/NewAccount"
 import { Password } from "./src/sceens/password/Password"
 import { Home } from "./src/sceens/home/Home";
 import { Profile } from "./src/sceens/profile/Profile";
-import { ProfileEdit } from "./src/sceens/profile/ProfileEdit"
 import { MedicalRecord } from "./src/sceens/medicalRecord/MedicalRecord"
 import { MedicalRecordEdit } from "./src/sceens/medicalRecord/MedicalRecordEdit"
 
@@ -70,7 +69,7 @@ export default function app() {
         />
 
 
-        <Stack.Screen
+        {/* <Stack.Screen
 
           //nome da tela 
           name='Navigation'
@@ -80,17 +79,13 @@ export default function app() {
 
           //titulo da tela
           options={{ title: 'Navigation' }}
-        />
+        /> */}
         <Stack.Screen
           name="TelaCalendars"
           component={TelaCalendars}
 
         />
-        <Stack.Screen
-          name="ProfileEdit"
-          component={ProfileEdit}
-          options={{ title: "Profile Edit" }}
-        />
+        
         <Stack.Screen
           name="Profile"
           component={Profile}
