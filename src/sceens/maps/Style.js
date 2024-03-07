@@ -3,7 +3,7 @@ import { InputProntEdit } from "../../components/input/Style";
 
 export const ViewMaps = styled.View`
 flex-direction: row;
-margin-left: 15px;
+margin-left:px;
 gap: -100px;
 `
 export const InputMaps = styled(InputProntEdit)`

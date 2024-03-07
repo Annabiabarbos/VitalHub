@@ -5,6 +5,7 @@ export const Title = styled.Text`
 font-size: 20px;
 color: #33303E;
 margin-bottom: 5px;
+margin-top: 10px;
 font-family: "MontserratAlternates_600SemiBold";
 `
 export const Age= styled.Text `
@@ -54,16 +55,17 @@ margin-left: -20px;
 
 export const TitleClinic = styled(Title)`
 align-self: center;
+margin-top: 10px;
 `
 
 export const TextModalConfirmation = styled(TextInputModal)`
-margin-right: 100px;
+margin-left: -50px;
 `
 
 export const Informationsmodal = styled.Text`    
 font-family: "Quicksand_500Medium";
 font-size: 14px;
-margin-top: 15px ;
-margin-right: 70;
+margin-top: 7px ;
+margin-right: 100px;
 color: #4E4B59;
 `

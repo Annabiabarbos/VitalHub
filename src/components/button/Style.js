@@ -95,7 +95,7 @@ export const ButtonClinic =styled(Button)`
 margin-left: 20px;
 `
 export const ButtonSecondaryModal = styled(ButtonSecondary)`
-margin-top: -140px;
+margin-top: 70px;
 `
 
 export const ButtonPrescription = styled.TouchableOpacity`

@@ -2,7 +2,9 @@ import { Modal } from "react-native"
 import { Container } from "../container/Style"
 import { Confirmation } from "../confirmation/Confirmation"
 import { useState } from "react"
-import { ButtonSecondary, ButtonSecondaryModal, ButtonSecondaryTitle } from "../button/Style"
+import { ButtonSecondaryModal, ButtonSecondaryTitle, Button } from "../button/Style"
+import { ButtonText } from "../appointmentCard/Style"
+import { ButtonTittle } from "../buttonTitle/Style"
 
 export const ConfirmModal = ({ visible, navigation, setShowConfirmationModal, ...rest }) => {
 
@@ -10,13 +12,7 @@ export const ConfirmModal = ({ visible, navigation, setShowConfirmationModal, ..
 
     return (
         <Modal {...rest} visible={visible} transparent={true} animationType="fade">
-            <Confirmation />
-
-            <ButtonSecondaryModal onPress={() => setShowConfirmationModal(false)}>
-                <ButtonSecondaryTitle>
-                    Cancelar
-                </ButtonSecondaryTitle>
-            </ButtonSecondaryModal>
+            <Confirmation navigation={navigation}/>
         </Modal>
     )
 }

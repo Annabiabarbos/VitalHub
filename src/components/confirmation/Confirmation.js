@@ -1,4 +1,3 @@
-import { ButtonText } from "../appointmentCard/Style"
 import { Button, ButtonSecondary, ButtonSecondaryModal, ButtonSecondaryTitle } from "../button/Style"
 import { ButtonTittle } from "../buttonTitle/Style"
 import { ModalText } from "../cancelationModal/Style"
@@ -8,7 +7,7 @@ import { ButtonTabsStyleSchedule, ButtonTextStyleSchedule } from "../schedule/St
 import { Informationsmodal, TextInputModal, TextModalConfirmation, Title } from "../title/Style"
 import { ContainerModalContainer, ViewInformationModal } from "./Style"
 
-export const Confirmation = ({ textButton, clickButton = false, onPress, setShowConfirmationModal }) => {
+export const Confirmation = ({ textButton, clickButton = false, onPress, setShowConfirmationModal, navigation }) => {
     return (
         <ModalConfirmation>
 
@@ -38,9 +37,18 @@ export const Confirmation = ({ textButton, clickButton = false, onPress, setShow
                 <Informationsmodal>Rotina</Informationsmodal>
             </ViewInformationModal>
 
-            <Button>
+
+            <Button onPress={() => navigation.navigate("Main")}>
                 <ButtonTittle>Confirmar</ButtonTittle>
             </Button>
+
+            <ButtonSecondaryModal onPress={() => setShowConfirmationModal(false)}>
+                <ButtonSecondaryTitle>
+                    Cancelar
+                </ButtonSecondaryTitle>
+            </ButtonSecondaryModal>
+
+            
 
         </ModalConfirmation>
     )

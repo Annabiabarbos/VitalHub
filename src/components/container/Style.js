@@ -24,4 +24,3 @@ export const ContainerHeader = styled(LinearGradient).attrs({
     border-radius: 0px 0px 15px 15px;
     box-shadow: 0px 4px 15px #00000014;
   `;
-

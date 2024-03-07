@@ -7,43 +7,56 @@ import { Button } from "../../components/button/Style"
 import { ButtonTittle } from "../../components/buttonTitle/Style"
 import { Text, TextEmail } from "../../components/texts/Style"
 import { LinkReenviar } from "../../components/links/Style"
+import { ImageBack, TouchableOpacityBack, ViewNewPsw } from "../newPassword/Style"
 
 
-export const Verify = ({navigation}) => {
-    return(
+export const Verify = ({ navigation }) => {
+    return (
         <Container>
 
-             <Logo source={require("../../../assets/logo.png")}/>
+            <ViewNewPsw>
 
-             <Title>Verifique seu e-mail</Title>
+                <TouchableOpacityBack onPress={() => navigation.navigate("Password")}>
+                    <ImageBack source={require("../../../assets/BackIcon.png")}
 
-             <Text>Digite o código de 4 dígitos enviado para <TextEmail>username@email.com</TextEmail> </Text>
-             
+                    />
+                </TouchableOpacityBack>
 
-             <View style={{
-            justifyContent: "center", 
-            alignItems: "center", 
-            flexDirection: "row",
-            gap: 15
+
+
+                <Logo source={require("../../../assets/logo.png")} />
+
+            </ViewNewPsw>
+
+            <Title>Verifique seu e-mail</Title>
+
+            <Text>Digite o código de 4 dígitos enviado para <TextEmail>username@email.com</TextEmail> </Text>
+
+
+            <View style={{
+                justifyContent: "center",
+                alignItems: "center",
+                flexDirection: "row",
+                gap: 15
             }}
             >
-                <InputNumbers placeholder = "0"/>
-                <InputNumbers placeholder = "0"/>
-                <InputNumbers placeholder = "0"/>
-                <InputNumbers placeholder = "0"/>
-             </View>
+                <InputNumbers placeholder="0" />
+                <InputNumbers placeholder="0" />
+                <InputNumbers placeholder="0" />
+                <InputNumbers placeholder="0" />
+            </View>
 
-             <Button
-             onPress={() => navigation.navigate ("NewPassword")}
-             >
+            <Button
+                onPress={() => navigation.navigate("NewPassword")}
+            >
                 <ButtonTittle>Entrar</ButtonTittle>
-             </Button>
+            </Button>
 
-             <LinkReenviar>Reenviar código</LinkReenviar>
-             
+            <LinkReenviar>Reenviar código</LinkReenviar>
+
 
         </Container>
-       
-        
+
+
     )
 }

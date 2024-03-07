@@ -24,7 +24,7 @@ export const TelaCalendars = ({ navigation }) => {
                 setShowConfirmationModal={setShowConfirmationModal}
                 navigation={navigation}
             />
-            <Button onPress={() => navigation.navigate("Main")}>
+            <Button onPress={() => { setShowConfirmationModal(true) }}>
                 <ButtonTextProfile>Continuar</ButtonTextProfile>
             </Button>
 

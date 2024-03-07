@@ -7,25 +7,35 @@ import { Logo } from "../../components/logo/Style"
 import { Text } from "../../components/texts/Style"
 import { Title } from "../../components/title/Style"
 import { Button } from "../../components/button/Style"
+import { ImageBack, TouchableOpacityBack, ViewNewPsw } from "../newPassword/Style"
 
 
 
-export const Password = ({navigation}) => {
-    return(
+export const Password = ({ navigation }) => {
+    return (
         <Container>
-            <Logo
-            source={require("../../../assets/logo.png")}
-            />
+            <ViewNewPsw>
+
+                <TouchableOpacityBack onPress={() => navigation.navigate("Login")}>
+                    <ImageBack source={require("../../../assets/BackIcon.png")}
+                    />
+                </TouchableOpacityBack>
+
+
+
+                <Logo source={require("../../../assets/logo.png")} />
+
+            </ViewNewPsw>
             <Title>Recuperar Senha</Title>
             <Text>Digite abaixo seu email cadastrado que enviaremos um link para recuperação de senha</Text>
             <Input
-            placeholder="Usuário ou email"
+                placeholder="Usuário ou email"
             />
-            
-            <Button onPress={() => navigation.navigate ("Verify")}>
+
+            <Button onPress={() => navigation.navigate("Verify")}>
                 <ButtonTittle>Continuar</ButtonTittle>
             </Button>
-           
+
         </Container>
     )
 }

@@ -5,13 +5,26 @@ import { Input } from "../../components/input/Style"
 import { Logo } from "../../components/logo/Style"
 import { Text, TextCancelar } from "../../components/texts/Style"
 import { Title } from "../../components/title/Style"
+import { ImageBack, TouchableOpacityBack, ViewNewPsw } from "../newPassword/Style"
 
 
 export const NewAccount = ({ navigation }) => {
     return (
         <Container>
 
-            <Logo source={require("../../../assets/logo.png")} />
+            <ViewNewPsw>
+
+                <TouchableOpacityBack onPress={() => navigation.navigate("Login")}>
+                    <ImageBack source={require("../../../assets/BackIcon.png")}
+                    
+                    />
+                </TouchableOpacityBack>
+
+
+
+                <Logo source={require("../../../assets/logo.png")} />
+
+            </ViewNewPsw>
 
             <Title>Criar conta</Title>
 

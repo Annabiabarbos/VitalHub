@@ -1,11 +1,12 @@
 import styled from "styled-components";
 import { Container } from "../../components/container/Style";
 
-export const ContainerClinic = styled(Container)`
-align-items: start;
-margin-left: -5%;
-margin-right: -5%;
+export const ContainerClinic = styled.SafeAreaView`
+align-items: center;
+height: 100%;
 `
+
+
 export const HourClinic = styled.View`
 width: 100px;
 height: 25px;

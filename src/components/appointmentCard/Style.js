@@ -68,16 +68,16 @@ text-transform: uppercase;
 text-align: center;
 `
 export const ClinicCard = styled(DataProfileCard)`
-width: 85%;
-height: 35%;
+width: 320px;
+height: 84px;
 background-color: white;
 elevation : 8;
 /* box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.08); */
 margin-bottom: 5%;
 border-radius: 5px;
+margin-top: 10px;
 `
 
 export const ProfileNameClinic =styled(ProfileName)`
 align-self: start;
-margin-bottom: -20px;
 `

@@ -21,14 +21,14 @@ export const ChoiceDoctor = ({navigation}) => {
                 </DoctorCard>
                 <DoctorCard>
                     <ContCard>
-                        <ImageCard source={{ uri: "../../../assets/Doctor1.png" }} />
+                        <ImageCard  source={require("../../../assets/Doctor2.png")}/>
                         <TitleCard>Dr Kumushiro</TitleCard>
                     </ContCard>
                     <TextArea>Cirurgião, Cardiologista</TextArea>
                 </DoctorCard>
                 <DoctorCard>
                     <ContCard>
-                        <ImageCard source={{ uri: "../../../assets/Doctor1.png" }} />
+                        <ImageCard source={require("../../../assets/Doctor3.png")}/>
                         <TitleCard>Dr Rodrigo Santos</TitleCard>
                     </ContCard>
                     <TextArea>Clínico, Pediatra</TextArea>

@@ -5,7 +5,7 @@ import { Container } from "../../components/container/Style"
 import { HomeCalendar } from "../../components/homeCalendar/HomeCalendar"
 import { Header } from "../../components/header/Header"
 import { useState } from "react"
-import {FilterAppointament, IconButton } from "./style"
+import { FilterAppointament, IconButton } from "./style"
 import { AbsListAppointament } from "../../components/absListAppointment/absListAppointment"
 
 import { ListComponent } from "../../components/list/List"
@@ -30,22 +30,19 @@ export const Home = ({ navigation }) => {
     const [showModalAppointment, setShowModalAppointment] = useState(false);
     const [showScheduleModal, setShowScheduleModal] = useState(false)
 
-    
+
     return (
         <Container>
 
             <StatusBar />
 
             {/* Header */}
-            <Header navigation={navigation}/>
+            <Header navigation={navigation} />
 
             {/* Calendar */}
             <HomeCalendar />
 
             {/* Filtros (button) */}
-
-
-
 
             <FilterAppointament >
 
@@ -67,17 +64,18 @@ export const Home = ({ navigation }) => {
                     onPress={() => setStatusLista("cancelado")}
                 />
 
-            </FilterAppointament> 
+            </FilterAppointament>
             {/* cards */}
             {/* lista (flatlist) */}
 
-            <ListComponent 
+            <ListComponent
                 data={Consultas}
                 keyExtractor={(item) => item.id}
 
                 renderItem={({ item }) =>
                     statusLista == item.situacao && (
-                        <AppointmentCard navigation={navigation}
+                        <AppointmentCard
+                            navigation={navigation}
                             situacao={item.situacao}
                             onPressCancel={() => setShowModalCancel(true)}
                             onPressAppointment={() => setShowModalAppointment(true)}
@@ -94,6 +92,7 @@ export const Home = ({ navigation }) => {
                 visible={showModalAppointment}
                 setShowModalAppointment={setShowModalAppointment}
                 navigation={navigation}
+                situacao={statusLista}
             />
 
             <ScheduleModal

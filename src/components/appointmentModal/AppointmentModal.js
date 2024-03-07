@@ -6,8 +6,14 @@ import { ModalContent, ModalText } from "../cancelationModal/Style";
 
 
 
+const AppointmentModal = ({visible, navigation, setShowModalAppointment, typeProfile = "paciente" , situacao, ...rest }) => {
 
-const AppointmentModal = ({visible, navigation, setShowModalAppointment,  ...rest }) => {
+    async function HandleClose(screen){
+        await setShowModalAppointment(false)
+
+        navigation.replace(screen)
+    }
+
     return (
         <Modal {...rest} visible={visible} transparent={true} animationType="fade">
             <AppointmentModalpront>
@@ -22,9 +28,20 @@ const AppointmentModal = ({visible, navigation, setShowModalAppointment,  ...res
                         <Email>joao.oliveiira.pda@gmail.com</Email>
                     </Informations>
 
-                    <Button onPress={() => navigation.navigate("MedicalRecord")}>
-                        <TextButtonPront>Inserir prontuário</TextButtonPront>
-                    </Button>
+                    {situacao !== "pendente" ? (
+                        <Button >
+                            <ButtonTitle onPress = {() => HandleClose ("MedicalRecord")}>
+                                Inserir prontuário
+                            </ButtonTitle>
+                        </Button>
+                    ): (
+                        <Button onPress = {() => HandleClose ("Maps")}>
+                            <ButtonTitle>
+                                Ver local da consulta
+                            </ButtonTitle>
+                        </Button>
+                    )
+                }
 
                     <ButtonSecondary onPress={() => setShowModalAppointment(false)}>
                         <ButtonSecondaryTitle>

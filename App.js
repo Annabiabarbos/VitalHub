@@ -56,13 +56,17 @@ export default function app() {
 
     <NavigationContainer>
 
-      <Stack.Navigator>
+      <Stack.Navigator
+
+        screenOptions={{ headerShown: false }}
+
+      >
 
         <Stack.Screen
           name="Login"
           component={Login}
         />
-        
+
         <Stack.Screen
           name="Main"
           component={Main}
@@ -80,12 +84,14 @@ export default function app() {
           //titulo da tela
           options={{ title: 'Navigation' }}
         /> */}
+
+        
         <Stack.Screen
           name="TelaCalendars"
           component={TelaCalendars}
 
         />
-        
+
         <Stack.Screen
           name="Profile"
           component={Profile}
@@ -94,7 +100,7 @@ export default function app() {
 
 
         <Stack.Screen
-          name="RecuperarSenha"
+          name="Password"
           component={Password}
 
         />
