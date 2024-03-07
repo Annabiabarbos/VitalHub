@@ -12,5 +12,4 @@ align-items: center;
 gap: 20px;
 `
 export const TouchableOpacityBack = styled.TouchableOpacity`
-
 `
