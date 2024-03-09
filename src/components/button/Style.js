@@ -46,6 +46,18 @@ text-transform: capitalize;
 text-decoration: underline;
 color: #344f8f;
 `
+
+export const ButtonCancellExams = styled.TouchableOpacity`
+width: 60px;
+height: 20px;
+margin-top: 10px;
+`
+
+export const TittleCancellExams = styled(ButtonSecondaryTitle)`
+font-family: "Quicksand_500Medium";
+color: #C81D25;
+`
+
 export const ButtonProfile = styled(Button)`
 margin-left: 10px;
 `
@@ -111,4 +123,14 @@ margin-bottom: -100px;
 
 export const ButtonModal = styled(Button)`
 margin-top: 40%;
+`
+
+export const ButtonAdd = styled.TouchableOpacity`
+width: 170px;
+height: 44px;
+border-radius: 5px;
+margin-top: 10px;
+background-color: #49B3BA;
+align-items: center;
+justify-content: center;
 `

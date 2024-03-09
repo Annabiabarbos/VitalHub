@@ -1,13 +1,13 @@
 
 import { Informations, ProfileImagePront } from "../../components/appointmentModal/Style"
-import { ButtonCancell, ButtonSecondaryTitle } from "../../components/button/Style"
+import { ButtonAdd, ButtonCancell, ButtonCancellExams, ButtonSecondaryTitle, TittleCancellExams } from "../../components/button/Style"
 import { Container, ContainerViewPrescription } from "../../components/container/Style"
 import { InputProfile, InputPront, InputProntBig } from "../../components/input/Style"
 import { ContainerScroll, ContainerScrollProfile, ScrollViewPrescription } from "../../components/scrollView/ScrollView"
 import { Age, Email, TextInputDesc, TextInputDiag, TextInputInsertImage, TextInputMed, Title } from "../../components/title/Style"
-import { ImageExams, ImportImages } from "./Style"
+import { ImageExams, ImportImages, SendImage, ViewButtons } from "./Style"
 
-export const ViewPrescription = ({navigation}) => {
+export const ViewPrescription = ({ navigation }) => {
     return (
         <ContainerViewPrescription>
 
@@ -52,11 +52,21 @@ export const ViewPrescription = ({navigation}) => {
                     <ImageExams source={require("../../../assets/InsertExams.png")} />
                 </ImportImages >
 
+                <ViewButtons>
+                    <ButtonAdd>
+                        <SendImage source={require("../../../assets/Send.png")} />
+                    </ButtonAdd>
+                    <ButtonCancellExams>
+                        <TittleCancellExams>Cancelar</TittleCancellExams>
+                    </ButtonCancellExams>
+                </ViewButtons>
+
+
             </ScrollViewPrescription>
 
             <ButtonCancell onPress={() => navigation.navigate("Home")}>
                 <ButtonSecondaryTitle>
-                    Cancelar
+                    Voltar
                 </ButtonSecondaryTitle>
             </ButtonCancell>
 
