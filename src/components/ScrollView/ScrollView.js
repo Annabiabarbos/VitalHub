@@ -13,3 +13,6 @@ export const ContainerScrollProfile = styled(ContainerScroll)`
 export const ScrollClinic = styled(ContainerScroll)`
 background-color: transparent;
 `
+export const ScrollViewPrescription = styled(ContainerScroll)`
+background-color: transparent;
+`

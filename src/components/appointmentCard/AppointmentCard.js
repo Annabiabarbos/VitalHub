@@ -65,7 +65,7 @@ export const AppointmentCard = ({
                         <ButtonText situacao={situacao}>Cancelar</ButtonText>
                     </ButtonCard>
                 ) : (
-                    <ButtonCard onPress={profile == "Paciente" ? () => {navigation.replace("MedicalRecord")}: onPressAppointment}>
+                    <ButtonCard onPress={profile == "Paciente" ? () => {navigation.replace("ViewPrescription")}: onPressAppointment}>
                         <ButtonText situacao={situacao}>Ver Prontuário</ButtonText>
                     </ButtonCard>
                 )

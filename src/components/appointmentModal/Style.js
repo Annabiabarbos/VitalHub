@@ -17,7 +17,8 @@ export const ModalContentpront = styled.View`
 export const ProfileImagePront =styled.Image`
 width:390px;
 height:220px;
-margin-top: -30px;
+margin-top: 
+0px;
 `
 export const Informations = styled.View`
 align-items: center;

@@ -22,9 +22,15 @@ margin-bottom: 30px;
 font-size: 25px;
 text-align: center;
 `
-export const InputProntBig = styled(Input)`
+export const InputProntBig = styled(Input).attrs({
+    placeholderTextColor: "#4E4B59"
+})`
 height: 120px ;
+width: 350px;
 margin-top: 10px;
+background-color: #E6E6E6;
+border-color: transparent;
+font-family: "MontserratAlternates_500Medium";
 `   
 export const InputProntBigEdit = styled(InputProntBig).attrs({
     placeholderTextColor: "#4E4B59"
@@ -43,10 +49,12 @@ border-color: transparent;
 export const InputPront = styled(Input)`  
 margin-top: 10px;
 `  
-export const InputProfile = styled(Input)`
+export const InputProfile = styled(Input).attrs({
+    placeholderTextColor: "#4E4B59"
+})`
 background-color: #E6E6E6;
 border-color: transparent;
-margin-left: 10px;
+
 font-family: "MontserratAlternates_500Medium";
 ` 
 export const InputAddress = styled(InputProfile)`

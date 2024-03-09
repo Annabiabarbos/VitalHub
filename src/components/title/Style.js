@@ -52,6 +52,11 @@ margin-top: 30px;
 export const TextInputModal = styled(TextInput)`
 margin-left: -20px;
 `
+export const TextInputInsertImage = styled(TextInputMed)`
+font-family: "MontserratAlternates_500Medium";
+color: #4E4B59;
+font-size: 14px;
+`
 
 export const TitleClinic = styled(Title)`
 align-self: center;

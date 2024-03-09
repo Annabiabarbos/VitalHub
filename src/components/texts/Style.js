@@ -9,7 +9,6 @@ margin-bottom: 20px;
 color: #5F5C6B;
 line-height: 24px;
 width: 320px;
-
 `
 
 export const  TextEmail = styled(Text)`

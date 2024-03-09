@@ -25,6 +25,7 @@ import { TelaCalendars } from "./src/sceens/telaCalendars/TelaCalendars";
 import { Maps } from "./src/sceens/maps/Maps";
 import { Prescription } from "./src/sceens/prescription/Prescription";
 import { Main } from "./src/sceens/main/Main";
+import { ViewPrescription } from "./src/sceens/viewPrescription/ViewPrescription";
 
 
 
@@ -85,7 +86,7 @@ export default function app() {
           options={{ title: 'Navigation' }}
         /> */}
 
-        
+
         <Stack.Screen
           name="TelaCalendars"
           component={TelaCalendars}
@@ -158,6 +159,11 @@ export default function app() {
           component={Prescription}
         />
 
+
+        <Stack.Screen
+          name="ViewPrescription"
+          component={ViewPrescription}
+        />
 
 
       </Stack.Navigator>
