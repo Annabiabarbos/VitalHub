@@ -34,13 +34,13 @@ export const ScheduleModal = ({ visible, navigation, setShowScheduleModal, ...re
                         />
 
                         <Schedule
-                            textButton={"realizadas"}
+                            textButton={"Exame"}
                             clickButton={statusLista === "realizado"}
                             onPress={() => setStatusLista("realizado")}
                         />
 
                         <Schedule
-                            textButton={"canceladas"}
+                            textButton={"Urgências"}
                             clickButton={statusLista === "cancelado"}
                             onPress={() => setStatusLista("cancelado")}
                         />
