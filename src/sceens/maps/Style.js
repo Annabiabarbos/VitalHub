@@ -20,3 +20,8 @@ export const ImageMaps = styled.Image`
 width: 100%;
 height: 324px;
 `
+
+export const ViewMap = styled.View`
+width: 100%;
+height: 324px;
+`

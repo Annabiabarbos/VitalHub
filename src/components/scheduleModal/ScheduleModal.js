@@ -64,7 +64,7 @@ export const ScheduleModal = ({ visible, navigation, setShowScheduleModal, ...re
                         <ButtonTittle>Continuar</ButtonTittle>
                     </ButtonModal>
 
-                    <ButtonSecondary onPress={() => setShowScheduleModal(false)}>
+                        <ButtonSecondary onPress={() => setShowScheduleModal(false)}>
                         <ButtonSecondaryTitle>
                             Cancelar
                         </ButtonSecondaryTitle>
