@@ -50,7 +50,10 @@ margin-top: 30px;
 `
 
 export const TextInputModal = styled(TextInput)`
-margin-left: -20px;
+margin-left: -50px;
+`
+export const ViewInput = styled.View`
+margin-left: 50px;
 `
 export const TextInputInsertImage = styled(TextInputMed)`
 font-family: "MontserratAlternates_500Medium";

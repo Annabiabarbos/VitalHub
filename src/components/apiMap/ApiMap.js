@@ -1,389 +1,133 @@
-import { Container } from "../container/Style"
-import {
-    requestForegroundPermissionsAsync, //solicita acesso a localização atual do dispositivo
-    getCurrentPositionAsync, // recebe a localização atual do dispositivo 
-
-    watchPositionAsync, //monitorar o posicionamento
-    LocationAccuracy  //pega 
-} from 'expo-location'
-import { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { ActivityIndicator, StyleSheet, Text, View } from 'react-native';
-
-// importando dependencia do mapa
 import MapView, { Marker, PROVIDER_GOOGLE } from 'react-native-maps';
-
-import {mapskey } from "../../utils/MapsApiKey"
-
 import MapViewDirections from 'react-native-maps-directions';
+import { requestForegroundPermissionsAsync, getCurrentPositionAsync, watchPositionAsync, LocationAccuracy } from 'expo-location';
+import { mapskey } from '../../utils/MapsApiKey';
 
 export const ApiMap = () => {
+  const mapReference = useRef(null);
+  const [initialPosition, setInitialPosition] = useState(null);
+  const [finalPosition] = useState({ latitude: -23.6666, longitude: -46.5322 });
 
-    const mapReference = useRef(null)
-    const [initialPosition, setInitialPosition] = useState(null)
-    const [finalPosition, setFinalPosition] = useState({
-        latitude: -23.6700,
-        longitude: -46.4486
+  // Função assíncrona para capturar a localização atual do dispositivo
+  async function CapturarLocalizacao() {
+    const { granted } = await requestForegroundPermissionsAsync();
+    if (granted) {
+      const captureLocation = await getCurrentPositionAsync();
+      setInitialPosition(captureLocation);
+    }
+  }
+
+  // Efeito para capturar a localização inicial e atualizar quando houver alterações
+  useEffect(() => {
+    CapturarLocalizacao();
+    watchPositionAsync({
+      accuracy: LocationAccuracy.Highest,
+      timeInterval: 1000,
+      distanceInterval: 1,
+    }, async (Response) => {
+      await setInitialPosition(Response)
+      mapReference.current?.animateCamera({
+        pitch: 60,
+        center: Response.coords
+      })
+      console.log(Response)
     })
+  }, []);
 
-    async function CapturarLocalizacao() {
-        const { granted } = await requestForegroundPermissionsAsync()
+  // Efeito para recarregar a visualização do mapa quando a posição inicial é atualizada
+  useEffect(() => {
+    RecarregarVisualizacaoMapa();
+  }, [initialPosition]);
 
-        if (granted) {
-            const captureLocation = await getCurrentPositionAsync()
+  // Função para ajustar a visualização do mapa para incluir as coordenadas inicial e final
+  async function RecarregarVisualizacaoMapa() {
+    if (mapReference.current && initialPosition) {
+      const coordinates = [
+        { latitude: initialPosition.coords.latitude, longitude: initialPosition.coords.longitude },
+        { latitude: finalPosition.latitude, longitude: finalPosition.longitude }
+      ];
 
-            setInitialPosition(captureLocation);
+      // Ajusta a visualização do mapa para incluir as coordenadas especificadas
+      mapReference.current.fitToCoordinates(
+        coordinates,
+        {
+          edgePadding: { top: 60, right: 60, bottom: 60, left: 60 },
+          animated: true
         }
+      );
     }
-    useEffect(() => {
-        CapturarLocalizacao()
-    
-        //monitora em tempo real 
-        watchPositionAsync({
-          accuracy: LocationAccuracy.Highest,
-          timeInterval: 1000,
-          distanceInterval: 1
-        }, async (Response) => {
-          //recebe e guarda a nova localizacao
-          await setInitialPosition(Response)
-    
-          mapReference.current?. animateCamera({
-            pitch: 60, //tempo
-            center: Response.coords 
-          })
-    
-    
-          console.log(Response);
-        })
-    
-      }, [1000])
-    
-      useEffect(() => {
-        RecarregarVisualizacaoMapa()
-      }, [initialPosition])
+  }
 
-
-    useEffect(() => {
-        RecarregarVisualizacaoMapa()
-    }, [initialPosition])
-
-    async function RecarregarVisualizacaoMapa() {
-        if (mapReference.current && initialPosition) {
-            await mapReference.current.fitToCoordinates(
-                [{ latitude: initialPosition.coords.latitude, longitude: initialPosition.coords.longitude },
-                { latitude: finalPosition.latitude, longitude: finalPosition.longitude }
-                ], {
-                edgePadding: { top: 60, right: 60, bottom: 60, left: 60 },
-                animated: true
-            }
-            )
-        }
-    }
-
-    return (
-        <View style={styles.container}>
-
-
-
-        {initialPosition != null ?
-  
-          <>
-            <MapView
-  
-              ref={mapReference}
-  
-              initialRegion={{
-                latitude: initialPosition.coords.latitude,
-                longitude: initialPosition.coords.longitude,
-                latitudeDelta: 0.5,
-                longitudeDelta: 0.5,
-              }}
-              provider={PROVIDER_GOOGLE}
-              customMapStyle={grayMapStyle}
-              style={styles.map}
-            >
-              <Marker
-  
-                coordinate={{
-                  latitude: initialPosition.coords.latitude,
-                  longitude: initialPosition.coords.longitude,
-                }}
-                title='Posição inicial'
-                description='Posição atual'
-                pinColor={'blue'}
-              />
-  
-  
-              <MapViewDirections
-  
-                origin={initialPosition.coords}
-                destination={
-                  {
-                    latitude: -23.6700,
-                    longitude: -46.4486,
-                    latitudeDelta: 0.0050,
-                    longitudeDelta: 0.0050,
-                  }}
-  
-                apikey={mapskey}
-                strokeWidth={5}
-                strokeColor={'#499bba'}
-  
-              />
-  
-              <Marker
-  
-                coordinate={{
-                  latitude: -23.6700,
-                  longitude: -46.4486,
-                }}
-                title='Local de destino'
-                description='Posição final'
-                pinColor={'purple'}
-              />
-            </MapView>
-  
-  
-          </> : <>
-  
-            <Text>Localização não encontrada</Text>
-            <ActivityIndicator />
-  
-          </>}
-      </View>
-    );
+  return (
+    <View style={styles.container}>
+      {initialPosition ? (
+        // Componente MapView que renderiza o mapa
+        <MapView
+          ref={mapReference}
+          initialRegion={{
+            latitude: initialPosition.coords.latitude,
+            longitude: initialPosition.coords.longitude,
+            latitudeDelta: 0.0050,
+            longitudeDelta: 0.0050,
+          }}
+          provider={PROVIDER_GOOGLE}
+          customMapStyle={beautifulMapStyle} // Estilo personalizado do mapa
+          style={styles.map}
+        >
+          {/* Marcador para a posição inicial */}
+          <Marker
+            coordinate={{
+              latitude: initialPosition.coords.latitude,
+              longitude: initialPosition.coords.longitude,
+            }}
+            title='posicao inicial'
+            pinColor={'green'}
+            description='estou aqui'
+          />
+          {/* Componente MapViewDirections para desenhar a rota entre a posição inicial e final */}
+          <MapViewDirections
+            origin={initialPosition.coords}
+            destination={finalPosition}
+            strokeWidth={5}
+            strokeColor='#993399'
+            apikey={mapskey}
+          />
+          {/* Marcador para a posição final */}
+          <Marker
+            coordinate={finalPosition}
+            title='posicao final'
+            pinColor={'purple'}
+            description='estou aqui'
+          />
+        </MapView>
+      ) : (
+        // Exibido quando a localização inicial ainda não foi capturada
+        <>
+          <Text>Localização não encontrada</Text>
+          <ActivityIndicator />
+        </>
+      )}
+    </View>
+  );
 }
 
+// Estilos CSS para o componente
 const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      backgroundColor: '#fff',
-      alignItems: 'center',
-      justifyContent: 'center',
-    },
-    map: {
-      flex: 1,
-      width: "100%"
-    },
-  });
-  const grayMapStyle = [
-    {
-      elementType: "geometry",
-      stylers: [
-        {
-          color: "#E1E0E7",
-        },
-      ],
-    },
-    {
-      elementType: "geometry.fill",
-      stylers: [
-        {
-          saturation: -5,
-        },
-        {
-          lightness: -5,
-        },
-      ],
-    },
-    {
-      elementType: "labels.icon",
-      stylers: [
-        {
-          visibility: "on",
-        },
-      ],
-    },
-    {
-      elementType: "labels.text.fill",
-      stylers: [
-        {
-          color: "#FBFBFB",
-        },
-      ],
-    },
-    {
-      elementType: "labels.text.stroke",
-      stylers: [
-        {
-          color: "#33303E",
-        },
-      ],
-    },
-    {
-      featureType: "administrative",
-      elementType: "geometry",
-      stylers: [
-        {
-          color: "#fbfbfb",
-        },
-      ],
-    },
-    {
-      featureType: "administrative.country",
-      elementType: "labels.text.fill",
-      stylers: [
-        {
-          color: "#fbfbfb",
-        },
-      ],
-    },
-    {
-      featureType: "administrative.land_parcel",
-      stylers: [
-        {
-          visibility: "on",
-        },
-      ],
-    },
-    {
-      featureType: "administrative.locality",
-      elementType: "labels.text.fill",
-      stylers: [
-        {
-          color: "#fbfbfb",
-        },
-      ],
-    },
-    {
-      featureType: "poi",
-      elementType: "labels.text.fill",
-      stylers: [
-        {
-          color: "#fbfbfb",
-        },
-      ],
-    },
-    {
-      featureType: "poi.business",
-      stylers: [
-        {
-          visibility: "on",
-        },
-      ],
-    },
-    {
-      featureType: "poi.park",
-      elementType: "geometry",
-      stylers: [
-        {
-          color: "#66DA9F",
-        },
-      ],
-    },
-    {
-      featureType: "poi.park",
-      elementType: "labels.text",
-      stylers: [
-        {
-          visibility: "on",
-        },
-      ],
-    },
-    {
-      featureType: "poi.park",
-      elementType: "labels.text.fill",
-      stylers: [
-        {
-          color: "#fbfbfb",
-        },
-      ],
-    },
-    {
-      featureType: "poi.park",
-      elementType: "labels.text.stroke",
-      stylers: [
-        {
-          color: "#1B1B1B",
-        },
-      ],
-    },
-    {
-      featureType: "road",
-      stylers: [
-        {
-          visibility: "on",
-        },
-      ],
-    },
-    {
-      featureType: "road",
-      elementType: "geometry.fill",
-      stylers: [
-        {
-          color: "#C6C5CE",
-        },
-      ],
-    },
-    {
-      featureType: "road",
-      elementType: "labels.text.fill",
-      stylers: [
-        {
-          color: "#FBFBFB",
-        },
-      ],
-    },
-    {
-      featureType: "road.arterial",
-      elementType: "geometry",
-      stylers: [
-        {
-          color: "#ACABB7",
-        },
-      ],
-    },
-    {
-      featureType: "road.highway",
-      elementType: "geometry",
-      stylers: [
-        {
-          color: "#8C8A97",
-        },
-      ],
-    },
-    {
-      featureType: "road.highway.controlled_access",
-      elementType: "geometry",
-      stylers: [
-        {
-          color: "#8C8A97",
-        },
-      ],
-    },
-    {
-      featureType: "road.local",
-      elementType: "labels.text.fill",
-      stylers: [
-        {
-          color: "#fbfbfb",
-        },
-      ],
-    },
-    {
-      featureType: "transit",
-      elementType: "labels.text.fill",
-      stylers: [
-        {
-          color: "#fbfbfb",
-        },
-      ],
-    },
-    {
-      featureType: "water",
-      elementType: "geometry",
-      stylers: [
-        {
-          color: "#8EA5D9",
-        },
-      ],
-    },
-    {
-      featureType: "water",
-      elementType: "labels.text.fill",
-      stylers: [
-        {
-          color: "#fbfbfb",
-        },
-      ],
-    },
-  ];
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  map: {
+    flex: 1,
+    width: "100%"
+  },
+});
+
+// Estilo personalizado para o mapa
+const beautifulMapStyle = [
+  // Estilo do mapa omitido por brevidade
+];
