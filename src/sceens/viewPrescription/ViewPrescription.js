@@ -53,7 +53,7 @@ export const ViewPrescription = ({ navigation }) => {
                 </ImportImages >
 
                 <ViewButtons>
-                    <ButtonAdd>
+                    <ButtonAdd onPress={() => navigation.navigate("CameraPage")}>
                         <SendImage source={require("../../../assets/Send.png")} />
                     </ButtonAdd>
                     <ButtonCancellExams>
