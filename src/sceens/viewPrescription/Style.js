@@ -11,7 +11,7 @@ align-items: center;
 justify-content: center;
 `
 export const ImageExams = styled.Image`
-width: 215px;
+width: 250px;
 height: 24px;
 align-self: center;
 `

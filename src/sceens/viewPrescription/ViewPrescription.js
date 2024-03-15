@@ -1,14 +1,19 @@
 
+import { useState } from "react"
 import { Informations, ProfileImagePront } from "../../components/appointmentModal/Style"
 import { ButtonAdd, ButtonCancell, ButtonCancellExams, ButtonSecondaryTitle, TittleCancellExams } from "../../components/button/Style"
 import { Container, ContainerViewPrescription } from "../../components/container/Style"
 import { InputProfile, InputPront, InputProntBig } from "../../components/input/Style"
 import { ContainerScroll, ContainerScrollProfile, ScrollViewPrescription } from "../../components/scrollView/ScrollView"
-import { Age, Email, TextInputDesc, TextInputDiag, TextInputInsertImage, TextInputMed, Title } from "../../components/title/Style"
+import { Age, Email, TextInput, TextInputDesc, TextInputDiag, TextInputInsertImage, TextInputMed, Title } from "../../components/title/Style"
 import { ImageExams, ImportImages, SendImage, ViewButtons } from "./Style"
 
-export const ViewPrescription = ({ navigation }) => {
+export const ViewPrescription = ({ navigation, route }) => {
+
+    const [cam, setCam] = useState(route.params == undefined ? false : true);
+
     return (
+
         <ContainerViewPrescription>
 
             <ProfileImagePront source={require("../../../assets/DoctorClaudio.png")} />
@@ -60,7 +65,6 @@ export const ViewPrescription = ({ navigation }) => {
                         <TittleCancellExams>Cancelar</TittleCancellExams>
                     </ButtonCancellExams>
                 </ViewButtons>
-
 
             </ScrollViewPrescription>
 

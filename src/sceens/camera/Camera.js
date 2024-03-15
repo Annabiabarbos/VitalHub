@@ -6,15 +6,34 @@ import { useEffect, useState, useRef } from 'react';
 import { FontAwesome } from '@expo/vector-icons';
 
 import * as MediaLibrary from "expo-media-library"
-import { ImageBack } from '../newPassword/Style';
 
+import * as ImagePicker from 'expo-image-picker';
+import { Button, ButtonTitle, Buttoncam } from '../../components/button/Style';
 
 export const CameraPage = ({ navigation }) => {
+    const [imageSource, setImageSource] = useState(null);
 
     const [typeCamera, setTypeCamera] = useState(Camera.Constants.Type.front)
     const cameraRef = useRef(null)
     const [photo, setPhoto] = useState(null)
     const [openModal, setOpenModal] = useState(false)
+
+
+    async function openImagePicker() {
+        const permissionResult = await ImagePicker.requestMediaLibraryPermissionsAsync();
+
+        if (permissionResult.granted === false) {
+            Alert.alert('Permissão negada para acessar a galeria');
+            return;
+        }
+
+        const pickerResult = await ImagePicker.launchImageLibraryAsync();
+
+        if (!pickerResult.cancelled) {
+            setPhoto(pickerResult.uri);
+            setOpenModal(true);
+        }
+    }
 
 
     useEffect(() => {
@@ -52,7 +71,8 @@ export const CameraPage = ({ navigation }) => {
         if (photo) {
             await MediaLibrary.createAssetAsync(photo)
                 .then(() => {
-                    Alert.alert('sucesso', 'foto salva na galeria')
+                    Alert.alert('Sucesso', 'Foto importada com sucesso');
+                    navigation.navigate("ViewPrescription" , {photoUri: photo})
                 }).catch(error => {
                     alert("Erro ao procesar foto")
                 })
@@ -85,7 +105,9 @@ export const CameraPage = ({ navigation }) => {
             </Camera>
             <View style={styles.btns}>
 
-                <TouchableOpacity style={styles.btnImage}>
+                <TouchableOpacity style={styles.btnImage}
+                    onPress={openImagePicker}
+                >
                     <FontAwesome name='image' size={23} color={'#496BBA'} />
                 </TouchableOpacity>
 
@@ -107,20 +129,27 @@ export const CameraPage = ({ navigation }) => {
                         source={{ uri: photo }}
                     />
 
-                    <View style={{ margin: 15, flexDirection: 'row' }}>
+                    <View style={{ margin: 15, gap: 20 }}>
+
+                        <Buttoncam onPress={SavePhoto} >
+                            <ButtonTitle>
+                                Salvar
+                            </ButtonTitle>
+                        </Buttoncam>
 
                         <TouchableOpacity style={styles.btnCancell}
                             onPress={() => ClearPhoto()}
                         >
-                            <FontAwesome name='trash' size={23} color={'#ff0000'} />
+                            <FontAwesome name='trash' size={50} color={'#496BBA'} />
                         </TouchableOpacity>
 
-                        <TouchableOpacity style={styles.btnUpload}
+
+                        {/* <TouchableOpacity style={styles.btnUpload}
                             onPress={() => SavePhoto()}
                         >
                             <FontAwesome name='save' size={23} color={'#121212'} />
 
-                        </TouchableOpacity>
+                        </TouchableOpacity> */}
                     </View>
                 </View>
             </Modal>

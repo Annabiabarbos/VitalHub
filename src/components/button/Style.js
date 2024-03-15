@@ -134,3 +134,8 @@ background-color: #49B3BA;
 align-items: center;
 justify-content: center;
 `
+
+export const Buttoncam = styled(Button)`
+width: 114px;
+margin-top: -30;
+`
