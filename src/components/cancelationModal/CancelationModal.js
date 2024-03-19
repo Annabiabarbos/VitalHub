@@ -4,8 +4,10 @@ import { Title } from "../title/Style"
 import { Button, ButtonSecondary, ButtonSecondaryTitle } from "../button/Style"
 import { ButtonTittle } from "../buttonTitle/Style"
 
+//import do notification
 import * as notifications from "expo-notifications"
 
+//conceder permissão
 notifications.requestPermissionsAsync();
 
 notifications.setNotificationHandler({
@@ -37,12 +39,13 @@ export const CancellationModal = ({ visible, setShowModalCancel, ...rest }) => {
         //enviar as notifications 
         await notifications.scheduleNotificationAsync({
             content: {
-                title: "Consulta cancelada",
+                title: "Consulta Cancelada",
                 body: "Sua consulta marcada para o dia 10/04 ás 14:15 foi cancelada",
             },
-            trigger: null/*{
+
+            trigger: {
             seconds: 5
-          }*/
+          }
         })
 
     }
